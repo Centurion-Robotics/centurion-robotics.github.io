@@ -8,6 +8,7 @@
             body {
                 font-family: 'League Spartan', sans-serif;
                 margin: 0;
+                line-height: 1.3;
             } nav {
                 text-align: center;
                 margin-top: 20px;
@@ -47,6 +48,15 @@
                 background-color: ghostwhite;
                 margin: 2px 0;
             }
+
+            .about-section {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            } .about-section img {
+                width: 500px;
+                align-items: center;
+            }
         </style>
     </head>
 
@@ -66,31 +76,44 @@
         <main>
             <p style = 'font-size: 18px; font-weight: 400;'>Website is under construction, please come back later.</p>
             <p style = 'font-size: 18px; font-weight: 100;'>If you are a member of our team, please contact Jenson or Nichola to help update our website. Thanks!</p><br><br>
-            <h2 style = 'font-size: 36px; font-weight: 600;'>Who are we?</h2>
-            <p style = 'font-size: 18px; font-weight: 400;'>[We are a group of Fort Richmond Collegiate students who came together to participate in a FIRST Tech Challenge (FTC) Team. We are motivated to design, build, and program robots to win competitions, but we also aim to inspire an interest in STEM within students and schools.]</p>
-            <p style = 'font-size: 18px; font-weight: 400;'>[As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.]</p>
+            <div class = 'about-section'>
+                <div class = 'about-text'>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>Who are we?</h2>
+                    <p style = 'font-size: 18px; font-weight: 400;'>[We are a group of Fort Richmond Collegiate students who came together to participate in a FIRST Tech Challenge (FTC) Team. We are motivated to design, build, and program robots to win competitions, but we also aim to inspire an interest in STEM within students and schools.]</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>[As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.]</p>
+                </div>
+                <img src = 'images\team_photo_qualifier_jan_2026.jpg' alt = 'Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
+            </div>
             <br><br><br>
-            <h2 style = 'font-size: 36px; font-weight: 600;'>What is FIRST Tech Challenge?</h2>
-            <ul style = 'font-size: 18px; font-weight: 400;'>
-                <li>[FIRST is an international robotics and STEM organization</li>
-                <li>FIRST is an acronym: “For Inspiration and Recognition of Science and Technology”</li>
-                <li>International Education Organization (~30,000 participants)</li>
-                <li>Founded in 1989 to encourage STEM and teamwork through robotics</li>
-                <li>Aims to Spark a lifelong interest in learning</li>
-                <li>Participants from 100+ countries]</li>
-            </ul>
+            <div class = 'FTC1-section'>
+                <div class = 'FTC1-text'>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>What is FIRST Tech Challenge?</h2>
+                    <ul style = 'font-size: 18px; font-weight: 400;'>
+                        <li>[FIRST is an international robotics and STEM organization</li>
+                        <li>FIRST is an acronym: “For Inspiration and Recognition of Science and Technology”</li>
+                        <li>International Education Organization (~30,000 participants)</li>
+                        <li>Founded in 1989 to encourage STEM and teamwork through robotics</li>
+                        <li>Aims to Spark a lifelong interest in learning</li>
+                        <li>Participants from 100+ countries]</li>
+                    </ul>
+                </div>
+            </div>
             <br><br><br>
-            <h2 style = 'font-size: 36px; font-weight: 600;'>Why is FIRST Tech Challenge important?</h2>
-            <ul style = 'font-size: 18px; font-weight: 400;'>
-                <li>[FIRST Alumni are:</li>
-                <ul>
-                    <li><b>89% more likely</b> to major in a STEM field</li>
-                    <li><b>68% more likely</b> to major in engineering or computer science</li>
-                </ul>
-                <li>FIRST Students have been shown to do well in STEM related subjects in school</li>
-                <li>FIRST encourages students to continue learning outside of school and search for opportunities</li>
-                <li>There are $80 Million worth of scholarships available, provided by 200 different companies and organizations]</li>
-            </ul>
+            <div class = 'FTC2-section'>
+                <div class = 'FTC2-text'>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>Why is FIRST Tech Challenge important?</h2>
+                    <ul style = 'font-size: 18px; font-weight: 400;'>
+                        <li>[FIRST Alumni are:</li>
+                        <ul>
+                            <li><b>89% more likely</b> to major in a STEM field</li>
+                            <li><b>68% more likely</b> to major in engineering or computer science</li>
+                        </ul>
+                        <li>FIRST Students have been shown to do well in STEM related subjects in school</li>
+                        <li>FIRST encourages students to continue learning outside of school and search for opportunities</li>
+                        <li>There are $80 Million worth of scholarships available, provided by 200 different companies and organizations]</li>
+                    </ul>
+                </div>
+            </div>
         </main>
         
         <hr>
