@@ -8,12 +8,31 @@
             body {
                 font-family: 'League Spartan', sans-serif;
                 margin: 0;
+            } nav {
+                text-align: center;
+                margin-top: 20px;
+            } nav a {
+                color: black;
+                text-decoration: none;
+                width: 110px;
+                margin: 0 20px;
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 300;
+                transition: transform 0.2s ease,
+                            color 0.2s ease,
+                            letter-spacing 0.2s ease;
+            } nav a:hover {
+                cursor: pointer;
+                color: #CC5500;
+                transform: scale(1.15);
+                letter-spacing: 1px;
             }
 
             header {
                 background-color: #F9BB17;
                 color: black;
-                padding: 40px 200px 40px 200px;
+                padding: 40px 100px 40px 100px;
             } main {
                 background-color: black;
                 color: ghostwhite;
@@ -21,7 +40,7 @@
             } footer {
                 background-color: #F9BB17;
                 color: black;
-                padding: 10px 200px 10px 200px;
+                padding: 10px 100px 10px 100px;
             } hr {
                 border: none;
                 height: 2px;
@@ -33,11 +52,22 @@
 
     <body>
         <header>
+            <nav>
+                <a href = 'index.html'>Home</a>
+                <a href = 'team.html'>Our Team</a>
+                <a href = 'events.html'>Events</a>
+                <a href = 'gallery.html'>Gallery</a>
+                <a href = 'sponsors.html'>Sponsors</a>
+                <a href = 'contact.html'>Contact</a>
+            </nav>
             <h1 style = 'font-size: 72px; font-weight: 700; text-align: center;'>Centurion Robotics 22689</h1>
         </header>
 
         <main>
             <p style = 'font-size: 18px; font-weight: 400;'>Website is under construction, please come back later.</p>
+            <h2 style = 'font-size: 36px; font-weight: 600;'>Who are we?</h2>
+            <p style = 'font-size: 18px; font-weight: 400;'>We are a group of Fort Richmond Collegiate students who came together to participate in a FIRST Tech Challenge (FTC) Team. We are motivated to design, build, and program robots to win competitions, but we also aim to inspire an interest in STEM within students and schools.</p>
+            <p style = 'font-size: 18px; font-weight: 400;'>As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.</p>
         </main>
         
         <hr>
