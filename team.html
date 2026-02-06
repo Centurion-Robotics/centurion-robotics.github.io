@@ -4,7 +4,7 @@
     <title>Our Team - Centurion Robotics 22689</title>
     <link href = "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel = "stylesheet">
     <style>
-        body {
+            body {
                 font-family: 'League Spartan', sans-serif;
                 margin: 0;
                 line-height: 1.3;
@@ -34,26 +34,38 @@
                 color: #CC5500;
                 transform: scale(1.15);
                 letter-spacing: 1px;
+            } footer {
+                background-color: black;
+                color: ghostwhite;
+                padding: 10px 100px 10px 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            } hr {
+                border: none;
+                height: 3px;
+                background-color: ghostwhite;
+                margin: 0px 0;
+            } footer p {
+                line-height: 1.2;
+                margin: 2px 0;
             }
-
+/*
             .team-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 30x;
-                padding: 50x;
+                padding: 50px 20px;
             }
             .member-card {
                 background-color: #1a1a1a;
                 border-bottom: 5px solid #F9BB17;
                 width: 250px;
-                padding: 20px;
+                padding: 30px 20px;
                 text-align: center;
-                border-radius: 10px;
-                transition: transform 0.3s ease;
-            }
-            .member-card:hover {
-                transform: translateY(-10px);
+                border-radius: 15px;
+                transition: all 0.3s ease;
             }
             .member-photo {
                 width: 150px;
@@ -65,18 +77,65 @@
             }
             .member-name {
                 font-size: 28px;
-                font-weight: 700;
+                font-weight: 500;
                 margin-top: 10px 0 5px 0;
             }
-            /* Error below */
             .member-role {
                 font-size: 18px;
                 color: #F9BB17
-                font-weight: 500;
-                text-transform: uppercase;
+                font-weight: 400;
             }
-            /* ^ Error ^ */
             .member-bio {
+                font-size: 16px;
+                font-weight: 300;
+                margin-top: 15px;
+            }*/
+            .footer-left, .footer-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .footer-left img {
+                width: 100px;
+                padding: 10px 12px 10px 12px;
+            }
+
+            .team-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30x;
+          padding: 50px 20px;
+      } .member-card {
+          background-color: #1a1a1a;
+          border-bottom: 5px solid #F9BB17;
+          width:250px;
+          padding:30px 20px;
+          text-align:center;
+          border-radius:15px;
+          transition:all 0.3s ease;
+      } .member-card:hover {
+          transform:translateY(-10px);
+          background-color: #ffdd00;
+          border-bottom: 5px solid #CC5500;
+          cursor: pointer;
+      } .member-photo {
+          width:150px;
+          height:150px;
+          border-radius:50%;
+          object-fit:cover;
+          border:3px solid #F9BB17;
+          margin:15px;
+      } .member-name {
+          font-size: 28px;
+          font-weight: 700;
+          margin-top: 10px 0 5px 0;
+      } .member-role {
+          font-size: 18px;
+          color: #F9BB17;
+          font-weight: 500;
+          text-transform: uppercase;
+      } .member-bio {
                 font-size: 16px;
                 font-weight: 300;
                 margin-top: 15px;
@@ -96,7 +155,7 @@
         <h1 style = 'font-size: 72px; font-weight: 700; text-align: center;'>Meet Our Team</h1>
     </header>
     <main>
-        <div class = "team container">
+        <div class = "team-container">
             <div class = "member-card">
                 <img src = "https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg" class="member-photo" alt="Member Name">
                 <div class = "member-name">Manan Jindal</div>
@@ -123,4 +182,18 @@
             </div>
         </div>
     </main>
+
+    <hr>
+    <footer>
+        <div class = 'footer-left'>
+            <img src = 'images\logo.png'>
+            <p style = 'font-size: 12px; font-weight: 200;'>© 2026 Centurion Robotics</p>
+        </div>
+        <div class = 'footer-right' style = 'text-align: right;'>
+            <p style = 'font-size: 15px; font-weight: 300;'>centurionrobots@gmail.com</p>
+            <p style = 'font-size: 15px; font-weight: 300;'>youtube.com/@centurionrobotics</p>
+            <p style = 'font-size: 15px; font-weight: 300;'>instagram.com/ftc_22689/</p>
+            <p style = 'font-size: 15px; font-weight: 300;'>99 Killarney Ave, Winnipeg, MB R3T 3B3</p>
+        </div>
+    </footer>
 </body>
