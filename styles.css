@@ -25,8 +25,19 @@ h3 {
     font-weight: 500;
 }
 
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section {
+    padding: 0 40px;
+}
+
 .header {
-    padding: 30px;
+    padding: 60px 30px;
     background-color: #F9BB17;
 }
 
@@ -57,6 +68,16 @@ header nav {
     align-items: stretch;
 }
 
+header nav ul {
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header nav ul li {
     text-align: center;
     flex-grow: 1;
@@ -73,20 +94,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #CC5500;
-    transform: scale(1.15);
-    letter-spacing: 1px;
 }
-
-header nav ul {
-    padding: 0;
-    margin: 0;
-    display: none;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 header nav label {
     display: none;
@@ -102,20 +110,18 @@ header #menu-toggle:checked ~ ul {
     transform: scale(1, 1);
 }
 
-main {
-    padding: 20px;
-} 
-
 hr {
     border: none;
     height: 3px;
-    background-color: ghostwhite;
-    margin: 0px 0;
+    background-color: #F9BB17;
+    margin: 0;
 }
 
 footer {
     padding: 40px;
+    color: ghostwhite;
 }
+
 footer > div {
     display: flex;
     justify-content: space-between;
@@ -125,7 +131,6 @@ footer > div {
 footer p, footer a, footer span{
     font-size: 16px;
 }
-
 footer p, footer h2, footer h3, footer a {
     margin: 0;
     padding: 0;
@@ -163,14 +168,26 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
-
 
 .footer-left img {
     width: 100px;
     object-fit: contain;
     object-position: top;
+}
+.footer-left h2 {
+    line-height: 1;
+}
+
+.footer-right div {
+    gap: 5px;
+    display: flex;
+    align-items: flex-start;
+    vertical-align: middle;
+}
+
+.footer-right p div {
+    text-align: right;
 }
 
 @media only screen and (max-width: 700px) {
@@ -198,27 +215,23 @@ footer a:hover {
         padding: 0 20px 20px 20px;
     }
 
-
     footer > div {
         flex-direction: column;
         text-align: left;
         align-items: center;
     }
+
     .footer-left, .footer-center, .footer-right {
         justify-content: center;
-        text-align: left;
     }
-
     .footer-center {
         flex-direction: row;
         gap: 10px;
     }
-
     .footer-right {
         flex-direction: row;
         gap: 5px;
     }
-
     .footer-right span {
         display: none;
     }
