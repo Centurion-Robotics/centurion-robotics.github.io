@@ -1,267 +1,239 @@
 <!DOCTYPE html>
 
-<head>
-    <title>Our Team - Centurion Robotics 22689</title>
-    <link href = "https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel = "stylesheet">
-    <style>
-        body {
-            font-family: 'League Spartan', sans-serif;
-            margin: 0;
-            line-height: 1.3;
-            overflow-x: hidden;
-            background-color: black;
-            color: ghostwhite;
-        } header {
-            background-color: #F9BB17;
-            color: black;
-            padding: 40px 50px 40px 50px;
-        } nav {
-            text-align: center;
-            margin-top: 20px;
-        } nav a {
-            color: black;
-            text-decoration: none;
-            width: 110px;
-            margin: 0 20px;
-            display: inline-block;
-            font-size: 24px;
-            font-weight: 300;
-            transition: transform 0.2s ease,
-                        color 0.2s ease,
-                        letter-spacing 0.2s ease;
-        } nav a:hover {
-            cursor: pointer;
-            color: #CC5500;
-            transform: scale(1.15);
-            letter-spacing: 1px;
-        } footer {
-            background-color: black;
-            color: ghostwhite;
-            padding: 10px 100px 10px 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        } hr {
-            border: none;
-            height: 3px;
-            background-color: ghostwhite;
-            margin: 0px 0;
-        } footer p {
-            line-height: 1.2;
-            margin: 2px 0;
-        }
-/*
-        .team-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30x;
-            padding: 50px 20px;
-        }
-        .member-card {
-            background-color: #1a1a1a;
-            border-bottom: 5px solid #F9BB17;
-            width: 250px;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-        .member-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #F9BB17;
-            margin: 15px;
-        }
-        .member-name {
-            font-size: 28px;
-            font-weight: 500;
-            margin-top: 10px 0 5px 0;
-        }
-        .member-role {
-            font-size: 18px;
-            color: #F9BB17
-            font-weight: 400;
-        }
-        .member-bio {
-            font-size: 16px;
-            font-weight: 300;
-            margin-top: 15px;
-        }*/
-        .footer-left, .footer-right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .footer-left img {
-            width: 100px;
-            padding: 10px 12px 10px 12px;
-        }
-
-        /*****/
-        .team-container {
-      display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 30x;
-          padding: 50px 20px;
-      } .member-card {
-          background-color: #1a1a1a;
-          border-bottom: 5px solid #F9BB17;
-          width:250px;
-          padding:30px 20px;
-          text-align:center;
-          border-radius:15px;
-          transition:all 0.3s ease;
-      } .member-card:hover {
-          transform:translateY(-10px);
-          background-color: #ffdd00;
-          border-bottom: 5px solid #CC5500;
-          cursor: pointer;
-      } .member-photo {
-          width:150px;
-          height:150px;
-          border-radius:50%;
-          object-fit:cover;
-          border:3px solid #F9BB17;
-          margin:15px;
-      } .member-name {
-          font-size: 28px;
-          font-weight: 700;
-          margin-top: 10px 0 5px 0;
-      } .member-role {
-          font-size: 18px;
-          color: #F9BB17;
-          font-weight: 500;
-          text-transform: uppercase;
-      } .member-bio {
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Our Team - Centurion Robotics 22689</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+    /*
+            .team-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30x;
+                padding: 50px 20px;
+            }
+            .member-card {
+                background-color: #1a1a1a;
+                border-bottom: 5px solid #F9BB17;
+                width: 250px;
+                padding: 30px 20px;
+                text-align: center;
+                border-radius: 15px;
+                transition: all 0.3s ease;
+            }
+            .member-photo {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #F9BB17;
+                margin: 15px;
+            }
+            .member-name {
+                font-size: 28px;
+                font-weight: 500;
+                margin-top: 10px 0 5px 0;
+            }
+            .member-role {
+                font-size: 18px;
+                color: #F9BB17
+                font-weight: 400;
+            }
+            .member-bio {
                 font-size: 16px;
                 font-weight: 300;
                 margin-top: 15px;
-            }
-            /***/
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href = 'index.html'>Home</a>
-            <a href = 'team.html'>Our Team</a>
-            <a href = 'events.html'>Events</a>
-            <a href = 'gallery.html'>Gallery</a>
-            <a href = 'sponsors.html'>Sponsors</a>
-            <a href = 'contact.html'>Contact</a>
-        </nav>
-        <h1 style = 'font-size: 72px; font-weight: 700; text-align: center;'>Meet Our Team</h1>
-    </header>
-    <main>
-        <div class = "team-container">
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg" class="member-photo" alt="Member Name">
-                <div class="member-name">Manan Jindal</div>
-                <div class="member-role">Team Lead</div>
-                <p class="member-bio">Designed our 2026 gear system for the robot's intake.</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_6dadc8779e9644f78ae97396ea648c51~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7617_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Nichola Chen</div>
-                <div class="member-role">Software Lead</div>
-                <p class="member-bio">Loves Computer Science a lot. Designed our Autonomous System</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_ebb9a62bd9f64d4a9bc210c383d1488d~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7602_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Saswat Bhandari</div>
-                <div class="member-role">Mechanical Lead</div>
-                <p class="member-bio">Working on it</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_29b75ce9d8da4df399e402695d81b1bd~mv2.png/v1/crop/x_0,y_0,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7581_heic.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Tanveer Saggu</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Working on it</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg" class="member-photo" alt="Member Name">
-                <div class="member-name">Brennan Fehr</div>
-                <div class="member-role">Software Team Member</div>
-                <p class="member-bio">Designed our 2026 gear system for the robot's intake.</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_6bb77db5d5644af7ab41d78946775e52~mv2.png/v1/crop/x_425,y_983,w_2163,h_2599/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7619_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Ben Xue</div>
-                <div class="member-role">Software Team Member</div>
-                <p class="member-bio">Passionate Coder</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_06dbea865e3149b5b2132bf1bcc0b47a~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7607_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Jenson Liu</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Working on it</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_908ac956b47548deadd99777ca73e983~mv2.png/v1/crop/x_0,y_184,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7573_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Inioluwa Olorunfemi</div>
-                <div class="member-role">Software Team Member</div>
-                <p class="member-bio">Loves building</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_38eec8a2809c44d2a82e1c80aefe7d81~mv2.png/v1/crop/x_604,y_931,w_1866,h_2242/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7611_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Allen Lan</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Designed our 2026 gear system for the robot's intake.</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_d10999fc32dd4a0da1c20042ccb2f693~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7594_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Manmohit Mahi</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Expert in mechanical design and CAD</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_0a6cf51c938f45c7be6a2e7c3961ea49~mv2.png/v1/crop/x_584,y_906,w_1896,h_2277/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7585_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Ved Lad</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Expert in mechanical design and CAD</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/8f3755_7f2942a19592400ab415b4f2905da74e~mv2.jpeg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-30%20at%2023_06_26%202.jpeg" class="member-photo" alt="Member Name">
-                <div class="member-name">Sam Khan</div>
-                <div class="member-role">Software Team Member</div>
-                <p class="member-bio">Loves building</p>
-            </div>
-                <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_67e7d654d56f4c3fa9b619f18460bd8c~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7599_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Ezra Huska</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Expert in mechanical design and competition planning</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_6bb77db5d5644af7ab41d78946775e52~mv2.png/v1/crop/x_425,y_983,w_2163,h_2599/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7619_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Nathan Lee</div>
-                <div class="member-role">Mechanical Team Member</div>
-                <p class="member-bio">Loves building</p>
-            </div>
-            <div class="member-card">
-                <img src="https://static.wixstatic.com/media/efa344_d10999fc32dd4a0da1c20042ccb2f693~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7594_HEIC.png" class="member-photo" alt="Member Name">
-                <div class="member-name">Sourav Mandal</div>
-                <div class="member-role">Software Team Member</div>
-                <p class="member-bio">Loves building</p>
-            </div>
-        </div>
-    </main>
+            }*/
 
-    <hr>
-    <footer>
-        <div class = 'footer-left'>
-            <img src = 'images\logo.png'>
-            <p style = 'font-size: 12px; font-weight: 200;'>© 2026 Centurion Robotics</p>
-        </div>
-        <div class = 'footer-right' style = 'text-align: right;'>
-            <p style = 'font-size: 15px; font-weight: 300;'>centurionrobots@gmail.com</p>
-            <p style = 'font-size: 15px; font-weight: 300;'>youtube.com/@centurionrobotics</p>
-            <p style = 'font-size: 15px; font-weight: 300;'>instagram.com/ftc_22689/</p>
-            <p style = 'font-size: 15px; font-weight: 300;'>99 Killarney Ave, Winnipeg, MB R3T 3B3</p>
-        </div>
-    </footer>
-</body>
+            /*****/
+            .team-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+                padding: 20px;
+            }
+
+            .team-container > div {
+                background-color: #1a1a1a;
+                border-bottom: 5px solid #F9BB17;
+                padding: 20px;
+                text-align: center;
+                border-radius: 15px;
+                transition: all 0.3s ease;
+            }
+
+            .team-container > div:hover {
+                transform: translateY(-5px);
+                background-color: #2a2a2a;
+                border-bottom: 5px solid #CC5500;
+            }
+            .team-container > div > img {
+                width: 175px;
+                height: 175px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 5px;
+            }
+            .team-container > div > h2 {
+                font-size: 28px;
+                margin: 10px 0 5px 0;
+            }
+            .team-container > div > h3 {
+                font-size: 24px;
+                color: #F9BB17;
+                font-weight: 600;
+                margin: 5px 0;
+                text-transform: uppercase;
+            }
+            .team-container > div > p {
+                font-size: 20px;
+                font-weight: 300;
+                margin-top: 15px;
+            }
+        </style>
+        <script defer src="fontawesome/all.min.js"></script>
+        <script defer src="fontawesome/fontawesome.min.js"></script>
+    </head>
+    <body>
+        <header>
+                <nav>
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle">&#9776;</label>
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="header">
+                <h1>Centurion Robotics 22689</h1>
+            </div>
+        <main>
+            <div class = "team-container">
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg" class="member-photo" alt="Member Name">
+                    <h2>Manan Jindal</h2>
+                    <h3>Team Lead</h3>
+                    <p>Designed our 2026 gear system for the robot's intake.</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_6dadc8779e9644f78ae97396ea648c51~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7617_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Nichola Chen</h2>
+                    <h3>Software Lead</h3>
+                    <p>Loves Computer Science a lot. Designed our Autonomous System</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_ebb9a62bd9f64d4a9bc210c383d1488d~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7602_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Saswat Bhandari</h2>
+                    <h3>Mechanical Lead</h3>
+                    <p>Working on it</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_29b75ce9d8da4df399e402695d81b1bd~mv2.png/v1/crop/x_0,y_0,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7581_heic.png" class="member-photo" alt="Member Name">
+                    <h2>Tanveer Saggu</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Working on it</p>
+                </div>
+                <div class="member-card">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC" class="member-photo" alt="Member Name">
+                    <h2>Brennan Fehr</h2>
+                    <h3>Software Team Member</h3>
+                    <p>Designed our 2026 gear system for the robot's intake.</p>
+                </div>
+                <div class="member-card">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC" class="member-photo" alt="Member Name">
+                    <h2>Ben Xue</h2>
+                    <h3>Software Team Member</h3>
+                    <p>Passionate Coder</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_06dbea865e3149b5b2132bf1bcc0b47a~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7607_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Jenson Liu</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Working on it</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_908ac956b47548deadd99777ca73e983~mv2.png/v1/crop/x_0,y_184,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7573_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Inioluwa Olorunfemi</h2>
+                    <h3>Software Team Member</h3>
+                    <p>Loves building</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_38eec8a2809c44d2a82e1c80aefe7d81~mv2.png/v1/crop/x_604,y_931,w_1866,h_2242/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7611_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Allen Lan</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Designed our 2026 gear system for the robot's intake.</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_d10999fc32dd4a0da1c20042ccb2f693~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7594_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Manmohit Mahi</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Expert in mechanical design and CAD</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_0a6cf51c938f45c7be6a2e7c3961ea49~mv2.png/v1/crop/x_584,y_906,w_1896,h_2277/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7585_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Ved Lad</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Expert in mechanical design and CAD</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/8f3755_7f2942a19592400ab415b4f2905da74e~mv2.jpeg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-30%20at%2023_06_26%202.jpeg" class="member-photo" alt="Member Name">
+                    <h2>Sam Khan</h2>
+                    <h3>Software Team Member</h3>
+                    <p>Loves building</p>
+                </div>
+                    <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_67e7d654d56f4c3fa9b619f18460bd8c~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7599_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Ezra Huska</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Expert in mechanical design and competition planning</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://static.wixstatic.com/media/efa344_6bb77db5d5644af7ab41d78946775e52~mv2.png/v1/crop/x_425,y_983,w_2163,h_2599/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7619_HEIC.png" class="member-photo" alt="Member Name">
+                    <h2>Nathan Lee</h2>
+                    <h3>Mechanical Team Member</h3>
+                    <p>Loves building</p>
+                </div>
+                <div class="member-card">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC" class="member-photo" alt="Member Name">
+                    <h2>Sourav Mandal</h2>
+                    <h3>Software Team Member</h3>
+                    <p>Loves building</p>
+                </div>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <div>
+                <div class='footer-left'>
+                    <img src='images/logo.png'>
+                    <div>
+                        <h2>Centurion Robotics</h2>
+                        <p>Team 22689</p>
+                    </div>
+                    
+                </div>
+                <div class='footer-center'>
+                    <a href="index.html">Home</a>
+                    <a href="our-team.html">Our Team</a>
+                    <a href="events.html">Events</a>
+                    <a href="sponsors.html">Sponsors</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class='footer-right'>
+                    <a href="mailto:centurionrobots@gmail.com"><i class="fa-solid fa-envelope"></i><span>centurionrobots@gmail.com</span></a>
+                    <a href="https:/youtube.com/@centurionrobotics"><i class="fa-brands fa-youtube"></i><span>@centurionrobotics</span></a>
+                    <a href="https://instagram.com/ftc_22689/"><i class="fa-brands fa-instagram"></i><span>@ftc_22689</span></a>
+                    <a href="https://github.com/Centurion-Robotics"><i class="fa-brands fa-github"></i><span>Centurion-Robotics</span></a>
+                    <p><i class="fa-solid fa-location-dot"></i>99 Killarney Ave, Winnipeg, MB R3T 3B3</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

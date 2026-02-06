@@ -1,0 +1,221 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    background-color: black;
+    color: ghostwhite;
+}
+
+p, li, a, span {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.header {
+    padding: 30px;
+    background-color: #F9BB17;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    color: black;
+}
+
+header {
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #F9BB17;
+    z-index: 1;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+header nav ul li {
+    text-align: center;
+    flex-grow: 1;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #CC5500;
+    transform: scale(1.15);
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header nav label {
+    display: none;
+    color: black;
+    font-size: 28px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+header #menu-toggle:checked ~ ul {
+    transform: scale(1, 1);
+}
+
+main {
+    padding: 20px;
+} 
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: ghostwhite;
+    margin: 0px 0;
+}
+
+footer {
+    padding: 60px;
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+footer p, footer a, footer span{
+    font-size: 16px;
+}
+
+footer p, footer h2, footer h3, footer a {
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    vertical-align: middle;
+    color: ghostwhite;
+    text-decoration: none;
+    transition: 0.2s all ease-in-out;
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+}
+footer a:hover {
+    color: #CC5500;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.footer-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-right {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+
+.footer-left img {
+    width: 100px;
+    object-fit: contain;
+    object-position: top;
+}
+
+@media only screen and (max-width: 700px) {
+    header nav ul {
+        flex-direction: column;
+        background-color: #F9BB17;
+        align-items: start;
+        position: absolute;
+        top: 71.4px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+        padding: 0 20px 20px 20px;
+    }
+
+    header {
+        padding: 20px 20px 15px 20px;
+    }
+
+    header nav label {
+        display: block;
+        cursor: pointer;
+    }
+
+    footer > div {
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+    }
+    .footer-left, .footer-center, .footer-right {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .footer-center {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .footer-right {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .footer-right span {
+        display: none;
+    }
+}
