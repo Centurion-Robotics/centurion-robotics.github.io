@@ -2,115 +2,266 @@
 
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Centurion Robotics 22689</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+            body {
+                font-family: 'League Spartan', sans-serif;
+                margin: 0;
+                line-height: 1.3;
+                overflow-x: hidden;
+                background-color: black;
+                color: ghostwhite;
+            } header {
+                background-color: #F9BB17;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 50px 40px 50px;
+            } nav {
+                margin-top: 20px;
+            } nav ul {
+                display: none;
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+            } nav ul li a {
+                color: black;
+                text-decoration: none;
+                width: 110px;
+                margin: 0 20px;
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 300;
+                transition: transform 0.2s ease,
+                            color 0.2s ease,
+                            letter-spacing 0.2s ease;
+            } nav ul li a:hover {
+                cursor: pointer;
+                color: #CC5500;
+                transform: scale(1.15);
+                letter-spacing: 1px;
+            } main {
+                background-color: black;
+                color: ghostwhite;
+                padding: 40px 80px 40px 80px;
+            } hr {
+                border: none;
+                background-color: #F9BB17;
+                height: 3px;
+                margin: 0px 0;
+            } footer {
+                background-color: black;
+                color: ghostwhite;
+                padding: 10px 100px 10px 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            } footer p {
+                line-height: 1.2;
+                margin: 2px 0;
+            }
 
             .about-section {
                 display: flex;
-                align-items: flex-start;
-                flex-direction: row;
+                align-items: center;
                 gap: 40px;
-            }
-            .about-section > div {
-                flex: 1;
-            }
-            .about-section img {
-                margin: 20px;
-                flex: 1;
-                width: 0;
-            }
-
-            @media only screen and (max-width: 700px) {
-                .about-section {
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .about-section img {
-                    width: 100%;
-                }
-            }
-
-            .section-divider {
+                padding-bottom: 72px;
+            } .about-section img {
+                width: 500px;
+                align-items: center;
+            } .section-divider {
                 height: 60px;
                 background: repeating-linear-gradient(
                     135deg,
                     #F9BB17 0px 10px,
                     black 10px 20px
                 );
-                margin: 0 -20px;
+                margin: 0 -80px;
+            } .FTC1-section {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            } .FTC2-section {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            } .footer-left, .footer-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px 0px;
+            } .footer-left img {
+                width: 100px;
+                padding: 0px 12px 10px 12px;
+            } .footer-left h3 {
+                display: none;
+            }.footer-right a {
+                text-align: right;
+                font-size: 15px;
+                font-weight: 300;
+                vertical-align: middle;
+                color: ghostwhite;
+                text-decoration: none;
+                transition: 0.2s all ease-in-out;
+                align-items: flex-start;
+            } .footer-right a:hover {
+                color: #CC5500;
+            }
+
+            /* ------------------------------ */
+            /*         ANNOUNCEMENTS          */
+            /* ------------------------------ */
+            .registration-26-27 {
+                color: #E5D1B1;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                background: repeating-linear-gradient(
+                    135deg,
+                    #1A1A1A 0px 30px,
+                    black 30px 60px
+                );
+                margin: 0 -80px;
+            } .registration-26-27 h3, .registration-26-27 p {
+                padding-left: 80px;
+                padding-right: 80px;
+            }.registration-26-27 a {
+                color: #F9BB17;
+                text-decoration: underline;
+            } .registration-26-27 a:hover {
+                cursor: pointer;
+            } .about-section {
+                padding-top: 50px;
+            }
+
+            /* ------------------------------ */
+            /*         MOBILE LAYOUT          */
+            /* ------------------------------ */
+            .menu-icon {
+                display: none;
+                cursor: pointer;
+                user-select: none;
+                position: fixed;
+            } #menu-toggle {
+                display: none;
+            } header #menu-toggle:checked ~ ul {
+                transform: scale(1, 1);
+            }
+
+            @media only screen and (max-width: 768px) {
+                header {
+                    align-items: flex-start;
+                } .menu-icon {
+                    display: block;
+                } nav ul {
+                    position: fixed;
+                    top: 80px;
+                    left: 10px;
+                    width: 34%;
+                    background-color: #D3D3D3;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 1rem;
+                    gap: 1rem;
+                    max-height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    transform: translateY(-10px);
+                    transition: max-height 0.45s ease,
+                                opacity 0.3s ease,
+                                transform 0.45s ease;
+                } #menu-toggle:checked + .menu-icon + nav ul {
+                    max-height: 500px;
+                    opacity: 1;
+                    transform: translateY(0);
+                } .about-section {
+                    flex-direction: column;
+                    align-items: center;
+                } .about-section img {
+                    width: 100%;
+                } footer > div {
+                    flex-direction: column;
+                    text-align: left;
+                    align-items: center;
+                } .footer-left {
+                    justify-content: center;
+                    flex-direction: row-reverse;
+                } .footer-left h3 {
+                    display: block;
+                    text-align: right;
+                } .footer-left p {
+                    display: none;
+                } .footer-right {
+                    justify-content: center;
+                    flex-direction: row;
+                    gap: 5px;
+                } .footer-right span {
+                    display: none;
+                }
             }
         </style>
-        <script defer src="fontawesome/all.min.js"></script>
-        <script defer src="fontawesome/fontawesome.min.js"></script>
     </head>
 
     <body>
         <header>
+            <input type = 'checkbox' id = 'menu-toggle'>
+            <label for = 'menu-toggle' class = 'menu-icon' style = 'font-size: 24px; text-align: left;'><i class = 'fa-solid fa-bars'></i></label>
             <nav>
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" style="font-size: 24px;"><i class="fa-solid fa-bars"></i></label>
-                <ul class="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="sponsors.html">Sponsors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class = 'menu'>
+                    <li><a href = 'index.html'>Home</a></li>
+                    <li><a href = 'team.html'>Our Team</a></li>
+                    <li><a href = 'events.html'>Events</a></li>
+                    <li><a href = 'gallery.html'>Gallery</a></li>
+                    <li><a href = 'sponsors.html'>Sponsors</a></li>
+                    <li><a href = 'contact.html'>Contact</a></li>
                 </ul>
             </nav>
+            <h1 style = 'font-size: 72px; font-weight: 700; text-align: center;'>Centurion Robotics 22689</h1>
         </header>
-        <div class="header">
-            <h1>Centurion Robotics 22689</h1>
-        </div>
+
         <main>
-            <div class="section">
-                <h2>This website is under construction, please come back later.</h2>
-                <p>If you are a member of our team, please contact Jenson or Nichola to help update our website. Thanks!</p>
+            <p style = 'font-size: 18px; font-weight: 400;'>Website is under construction, please come back later.</p>
+            <p style = 'font-size: 18px; font-weight: 100;'>If you are a member of our team, please contact Jenson or Nichola to help update our website. Thanks!</p><br><br>
+            <div class = 'registration-26-27'>
+                <h3 style = 'font-size: 22px; font-weight: 700;'>Registration for the 2026-27 season is now open!</h3>
+                <p style = 'font-size: 18px; font-weight: 400;'>Are you interested in robotics? Do you plan on taking post-secondary education in a STEM related field? Do you like working in a team environment? Do you want to make new connections and learn important skills?</p>
+                <p style = 'font-size: 18px; font-weight: 400;'>If you said yes to any of the questions above, then Centurion Robotics Team is the right place for you!</p>
+                <br><p style = 'font-size: 18px; font-weight: 400;'>The registration process is now open for all students who are currently in grades 8 to 11 and are enrolling in Fort Richmond Collegiate in the 2026-27 school year.</p>
+                <p style = 'font-size: 18px; font-weight: 400;'>To register, click on <a herf = ''>this link</a> and fill out the Google Form.</p>
+                <p style = 'font-size: 18px; font-weight: 400;'>Unfortunately, due to a large number of applicantions and a limited number of positions, not all applicants will be able to get into the Centurion Robotics Team. If you did not get into the Centurion Robotics Team, you can still help us out and be involved by joining our weekly meeting Friday afterschool at FRC's library classroom.</p>
+                <p style = 'font-size: 18px; font-weight: 400;'>If you have any questions, feel free to email us at <a herf = 'mailto:centurionrobots@gmail.com'>centurionrobots@gmail.com</a>. We will get back to you as soon as possible.</p>
+                <p style = 'font-size: 18px; font-weight: 400;'>Looking forward to having you in our team in the 2026-27 season!</p>
+                <p style = 'font-size: 18px; font-weight: 300; text-align: right;'>-- Centurion Robotics Leadership Team</p>
             </div>
-            <div class='section about-section'>
-                <div class='about-text'>
-                    <h2>Who are we?</h2>
-                    <p>
-                        We are a group of Fort Richmond Collegiate students who came together to participate in a FIRST Tech
-                        Challenge (FTC) Team. We are motivated to design, build, and program robots to win competitions, but we 
-                        also aim to inspire an interest in STEM within students and schools.
-                    </p>
-                    <p>
-                        As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.
-                    </p>
+            
+            <div class = 'about-section'>
+                <div class = 'about-text'>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>Who are we?</h2>
+                    <p style = 'font-size: 18px; font-weight: 400;'>We are a group of Fort Richmond Collegiate students who came together to participate in a FIRST Tech Challenge (FTC) Team. We are motivated to design, build, and program robots to win competitions, but we also aim to inspire an interest in STEM within students and schools.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.</p>
                 </div>
-                <img src='images\team_photo_qualifier_jan_2026.jpg' alt='Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
+                <img src = 'images\team_photo_qualifier_jan_2026.jpg' alt = 'Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
             </div>
-            <div class='section-divider'></div>
-            <div class='FTC1-section section'>
-                <div class='FTC1-text'>
-                    <h2>What is FIRST Tech Challenge?</h2>
-                    <p>
-                        It's way more than building robots. FIRST Tech Challenge teams (up to 15 team members, grades 7-12)
-                         are challenged to design, build, program, and operate robots to compete in a head-to-head challenge 
-                         in an alliance format.
-                    </p>
-                    <p>Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, 
-                        while realizing the value of hard work, innovation, and working as a team.
-                    </p>
-                    <p>The robot kit is reusable from year to year and can be coded using a variety of levels of graphical and 
-                        Java-based programming.
-                    </p>
-                    <p>Teams design and build robots, raise funds, design and market their team brand, and do community outreach 
-                        to earn specific awards.
-                    </p>
-                    <p>
-                        Each season concludes with regional championship events and an exciting FIRST Championship!
-                    </p>
+            
+            <div class = 'section-divider'></div>
+            <div class = 'FTC1-section'>
+                <div class = 'FTC1-text'>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>What is FIRST Tech Challenge?</h2>
+                    <p style = 'font-size: 18px; font-weight: 400;'>It's way more than building robots. FIRST Tech Challenge teams (up to 15 team members, grades 7-12) are challenged to design, build, program, and operate robots to compete in a head-to-head challenge in an alliance format.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, while realizing the value of hard work, innovation, and working as a team.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>The robot kit is reusable from year to year and can be coded using a variety of levels of graphical and Java-based programming.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Teams design and build robots, raise funds, design and market their team brand, and do community outreach to earn specific awards.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Each season concludes with regional championship events and an exciting FIRST Championship!</p>
                 </div>
             </div>
-            <div class='section'>
-                <div class='FTC2-text'>
-                    <h2>Why is FIRST Tech Challenge important?</h2>
-                    <h3 style='color: #E5D1B1;'>Students get to:</h3>
-                    <ul>
+            
+            <div class = 'FTC2-section'>
+                <div class = 'FTC2-text'>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>Why is FIRST Tech Challenge important?</h2>
+                    <h3 style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>Students get to:</h3>
+                    <ul style = 'font-size: 18px; font-weight: 400;'>
                         <li>Learn from professional engineers</li>
                         <li>Build and compete with a robot of their own design</li>
                         <li>Learn and use sophisticated software and hardware</li>
@@ -118,41 +269,28 @@
                         <li>Earn a place in the World Championship</li>
                         <li>Qualify for over $12 million in college scholarships</li>
                     </ul>
-                    <h3 style='color: #E5D1B1;'>FIRST Alumni are:</h3>
-                    <ul>
+                    <h3 style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>FIRST Alumni are:</h3>
+                    <ul style = 'font-size: 18px; font-weight: 400;'>
                         <li><b>2.0× more likely</b> to declare a major in Engineering</li>
                         <li><b>2.1× more likely</b> to declare a major in Computer Science</li>
                     </ul>
                 </div>
             </div>
         </main>
+        
         <hr>
         <footer>
-            <div>
-                <div class='footer-left'>
-                    <img src='images/logo.png'>
-                    <div>
-                        <h2>Centurion Robotics</h2>
-                        <p>Team 22689</p>
-                    </div>
-                </div>
-                <div class='footer-center'>
-                    <a href="/">Home</a>
-                    <a href="our-team.html">Our Team</a>
-                    <a href="events.html">Events</a>
-                    <a href="sponsors.html">Sponsors</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class='footer-right'>
-                    <a href="mailto:centurionrobots@gmail.com"><i class="fa-solid fa-envelope"></i><span>centurionrobots@gmail.com</span></a>
-                    <a href="https://youtube.com/@centurionrobotics"><i class="fa-brands fa-youtube"></i><span>@centurionrobotics</span></a>
-                    <a href="https://instagram.com/ftc_22689/"><i class="fa-brands fa-instagram"></i><span>@ftc_22689</span></a>
-                    <a href="https://github.com/Centurion-Robotics"><i class="fa-brands fa-github"></i><span>Centurion-Robotics</span></a>
-                    <div>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>99 Killarney Ave, Winnipeg, MB R3T3B3</p>
-                    </div>
-                </div>
+            <div class = 'footer-left'>
+                <img src = 'images\logo.png'>
+                <h3 style = 'font-size: 22px; font-weight: 500;'>Centurion Robotics 22689</h3>
+                <p style = 'font-size: 12px; font-weight: 200;'>© 2026 Centurion Robotics</p>
+            </div>
+            <div class = 'footer-right'>
+                <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i><span> centurionrobots@gmail.com</span></a>
+                <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i><span> @centurionrobotics</span></a>
+                <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i><span> @ftc_22689</span></a>
+                <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i><span> Centurion-Robotics</span></a>
+                <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
             </div>
         </footer>
     </body>
