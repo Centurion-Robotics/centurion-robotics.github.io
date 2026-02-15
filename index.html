@@ -3,11 +3,21 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Centurion Robotics 22689</title>
+        <meta name="theme-color" content="#F9BB17">
+        <title>Centurion Robotics</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
         <link rel="stylesheet" href="styles.css">
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-
+            .announcement {
+                background: repeating-linear-gradient(
+                    135deg,
+                    #1A1A1A 0px 30px,
+                    black 30px 60px
+                );
+            }
             .about-section {
                 display: flex;
                 align-items: flex-start;
@@ -18,12 +28,12 @@
                 flex: 1;
             }
             .about-section img {
-                margin: 20px;
                 flex: 1;
                 width: 0;
+                object-fit: contain;
             }
 
-            @media only screen and (max-width: 700px) {
+            @media only screen and (max-width: 1000px) {
                 .about-section {
                     flex-direction: column;
                     align-items: center;
@@ -46,7 +56,6 @@
         <script defer src="fontawesome/all.min.js"></script>
         <script defer src="fontawesome/fontawesome.min.js"></script>
     </head>
-
     <body>
         <header>
             <nav>
@@ -56,6 +65,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="team.html">Our Team</a></li>
                     <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="sponsors.html">Sponsors</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -68,6 +78,35 @@
             <div class="section">
                 <h2>This website is under construction, please come back later.</h2>
                 <p>If you are a member of our team, please contact Jenson or Nichola to help update our website. Thanks!</p>
+            </div>
+             <div class="section announcement">
+                <h3>Registration for the 2026-27 season is now open!</h3>
+                <p>
+                    Are you interested in robotics? Do you plan on taking post-secondary education in a STEM related field? Do 
+                    you like working in a team environment? Do you want to make new connections and learn important skills?
+                </p>
+                <p>
+                    If you said yes to any of the questions above, then Centurion Robotics Team is the right place for you!
+                </p>
+                <br>
+                <p>
+                    The registration process is now open for all students who are currently in grades 8 to 11 and are enrolling
+                    in Fort Richmond Collegiate in the 2026-27 school year. To register, click on <a>this link</a> and 
+                    fill out the Google Form.
+                </p>
+                <p>
+                    Unfortunately, due to a large number of applicantions and a limited number of positions, not all applicants 
+                    will be able to get into the Centurion Robotics Team. If you did not get into the Centurion Robotics Team, 
+                    you can still help us out and be involved by joining our weekly meeting Friday afterschool at FRC's library
+                    classroom.
+                </p>
+                <p>
+                    If you have any questions, feel free to email us at 
+                    <a href="mailto:centurionrobots@gmail.com">centurionrobots@gmail.com</a>.
+                     We will get back to you as soon as possible.
+                </p>
+                <p>Looking forward to having you in our team in the 2026-27 season!</p>
+                <p style='text-align: right;'>&mdash; Centurion Robotics Leadership Team</p>
             </div>
             <div class='section about-section'>
                 <div class='about-text'>
@@ -84,8 +123,8 @@
                 <img src='images\team_photo_qualifier_jan_2026.jpg' alt='Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
             </div>
             <div class='section-divider'></div>
-            <div class='FTC1-section section'>
-                <div class='FTC1-text'>
+            <div class='section section-1'>
+                <div>
                     <h2>What is FIRST Tech Challenge?</h2>
                     <p>
                         It's way more than building robots. FIRST Tech Challenge teams (up to 15 team members, grades 7-12)
@@ -107,7 +146,7 @@
                 </div>
             </div>
             <div class='section'>
-                <div class='FTC2-text'>
+                <div>
                     <h2>Why is FIRST Tech Challenge important?</h2>
                     <h3 style='color: #E5D1B1;'>Students get to:</h3>
                     <ul>
@@ -144,14 +183,11 @@
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class='footer-right'>
-                    <a href="mailto:centurionrobots@gmail.com"><i class="fa-solid fa-envelope"></i><span>centurionrobots@gmail.com</span></a>
-                    <a href="https://youtube.com/@centurionrobotics"><i class="fa-brands fa-youtube"></i><span>@centurionrobotics</span></a>
-                    <a href="https://instagram.com/ftc_22689/"><i class="fa-brands fa-instagram"></i><span>@ftc_22689</span></a>
-                    <a href="https://github.com/Centurion-Robotics"><i class="fa-brands fa-github"></i><span>Centurion-Robotics</span></a>
-                    <div>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>99 Killarney Ave, Winnipeg, MB R3T3B3</p>
-                    </div>
+                    <a href="mailto:centurionrobots@gmail.com"><span class="footer-right-icon"><i class="fa-solid fa-envelope"></i></span><span>centurionrobots@gmail.com</span></a>
+                    <a href="https://youtube.com/@centurionrobotics"><span class="footer-right-icon"><i class="fa-brands fa-youtube"></i></span><span>@centurionrobotics</span></a>
+                    <a href="https://instagram.com/ftc_22689/"><span class="footer-right-icon"><i class="fa-brands fa-instagram"></i></span><span>@ftc_22689</span></a>
+                    <a href="https://github.com/Centurion-Robotics"><span class="footer-right-icon"><i class="fa-brands fa-github"></i></span><span>Centurion-Robotics</span></a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=99+Killarney+Ave%2C+Winnipeg,+MB+R3T+3B3&query_place_id=ChIJL9J-k2bfwVIR9KO4JF7m0XA"><span class="footer-right-icon"><i class="fa-solid fa-location-dot"></i></span><span>99 Killarney Ave, Winnipeg, MB R3T&nbsp;3B3</span></p>
                 </div>
             </div>
         </footer>

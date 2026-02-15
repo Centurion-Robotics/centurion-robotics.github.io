@@ -1,1 +1,115 @@
+<!DOCTYPE html>
 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#F9BB17">
+        <title>Gallery | Centurion Robotics</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .season {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: row;
+                gap: 40px;
+            }
+            .season > div {
+                flex: 3;
+            }
+            .season img {
+                flex: 1;
+                width: 0;
+                object-fit: contain;
+                object-position: bottom;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: 500px;
+                grid-gap: 20px;
+            }
+            .grid > img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                display:flex;
+            }
+
+            @media only screen and (max-width: 650px) {
+                .season {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .season img {
+                    width: 100%;
+                }
+            }
+        </style>
+        <script defer src="fontawesome/all.min.js"></script>
+        <script defer src="fontawesome/fontawesome.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" style="font-size: 24px;"><i class="fa-solid fa-bars"></i></label>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 style="margin: 0;">
+                Gallery
+            </h1>
+            <div class = 'section season'>
+                <img src = 'https://www.firstinspires.org/hs-fs/hubfs/image-library/web/ftc_decode_1240x860.webp?width=630'>
+                <div class = 'season-description'>
+                    <h2>2025-26 Decode</h2>
+                    <p >FTC DECODE&trade; presented by RTX is the 2025-26 season game where teams use robotics to explore artifact-based missions and compete for advancement and awards.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <img style="grid-column: span 2;" src='https://static.wixstatic.com/media/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg/v1/fill/w_843,h_705,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg' alt = 'Friday after school meeting with an early chassis design. From left to right are Ved, Ezra, Manmohit, Allen and Jenson.'>
+                <img style="grid-column: span 1;" src='https://static.wixstatic.com/media/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg' alt = 'Robot prototyping in a Friday after school meeting. From left to right are Jenson and Manan.'>
+                <img style="grid-column: span 1;" src='https://static.wixstatic.com/media/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg' alt = 'Testing lift system in a weekend meeting. In the background is Jenson, and outside the frame is Ezra.'>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <div>
+                <div class='footer-left'>
+                    <img src='images/logo.png'>
+                    <div>
+                        <h2>Centurion Robotics</h2>
+                        <p>Team 22689</p>
+                    </div>
+                </div>
+                <div class='footer-center'>
+                    <a href="/">Home</a>
+                    <a href="our-team.html">Our Team</a>
+                    <a href="events.html">Events</a>
+                    <a href="sponsors.html">Sponsors</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class='footer-right'>
+                    <a href="mailto:centurionrobots@gmail.com"><span class="footer-right-icon"><i class="fa-solid fa-envelope"></i></span><span>centurionrobots@gmail.com</span></a>
+                    <a href="https://youtube.com/@centurionrobotics"><span class="footer-right-icon"><i class="fa-brands fa-youtube"></i></span><span>@centurionrobotics</span></a>
+                    <a href="https://instagram.com/ftc_22689/"><span class="footer-right-icon"><i class="fa-brands fa-instagram"></i></span><span>@ftc_22689</span></a>
+                    <a href="https://github.com/Centurion-Robotics"><span class="footer-right-icon"><i class="fa-brands fa-github"></i></span><span>Centurion-Robotics</span></a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=99+Killarney+Ave%2C+Winnipeg,+MB+R3T+3B3&query_place_id=ChIJL9J-k2bfwVIR9KO4JF7m0XA"><span class="footer-right-icon"><i class="fa-solid fa-location-dot"></i></span><span>99 Killarney Ave, Winnipeg, MB R3T&nbsp;3B3</span></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

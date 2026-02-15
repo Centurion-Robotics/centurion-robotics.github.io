@@ -1,15 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {box-sizing:border-box;}
+
 body {
     font-family: 'League Spartan', sans-serif;
     margin: 0;
     background-color: black;
     color: ghostwhite;
+    height: 100%;
+    width: 100vw;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
 }
 
 p, li, a, span {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: inherit;
 }
 
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color:#F9BB17;
+    transition: 0.2s all ease-in-out;
+}
+
+a:hover {
+    color:#CC5500;
+}
 h1 {
     font-size: 48px;
     font-weight: 700;
@@ -26,18 +47,18 @@ h3 {
 }
 
 main {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin: 60px 0;
 }
 
-.section {
-    padding: 0 40px;
+main > * {
+    padding: 0 60px;
 }
 
 .header {
-    padding: 60px 30px;
+    padding: 100px 30px;
     background-color: #F9BB17;
 }
 
@@ -137,14 +158,19 @@ footer p, footer h2, footer h3, footer a {
 }
 
 footer a {
-    vertical-align: middle;
     color: ghostwhite;
     text-decoration: none;
     transition: 0.2s all ease-in-out;
     display: flex;
     gap: 5px;
+    font-weight: 400;
     align-items: flex-start;
 }
+
+footer span {
+    font-weight: 300;
+}
+
 footer a:hover {
     color: #CC5500;
 }
@@ -163,8 +189,8 @@ footer a:hover {
     justify-content: flex-start;
 }
 .footer-right {
-    text-align: left;
     flex: 1;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -179,16 +205,6 @@ footer a:hover {
     line-height: 1;
 }
 
-.footer-right div {
-    gap: 5px;
-    display: flex;
-    align-items: flex-start;
-    vertical-align: middle;
-}
-
-.footer-right p div {
-    text-align: right;
-}
 
 @media only screen and (max-width: 700px) {
     header nav ul {
@@ -217,7 +233,6 @@ footer a:hover {
 
     footer > div {
         flex-direction: column;
-        text-align: left;
         align-items: center;
     }
 
@@ -232,7 +247,7 @@ footer a:hover {
         flex-direction: row;
         gap: 5px;
     }
-    .footer-right span {
+    .footer-right a span:not(.footer-right-icon) {
         display: none;
     }
 }
