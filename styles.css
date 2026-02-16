@@ -54,7 +54,7 @@ main {
 }
 
 main > * {
-    padding: 0 60px;
+    padding: 0 min(60px, 5vw);
 }
 
 .header {
@@ -129,6 +129,15 @@ header nav label {
 
 header #menu-toggle:checked ~ ul {
     transform: scale(1, 1);
+}
+
+.section-divider {
+    height: 60px;
+    background: repeating-linear-gradient(
+        135deg,
+        #F9BB17 0px 10px,
+        black 10px 20px
+    );
 }
 
 hr {
