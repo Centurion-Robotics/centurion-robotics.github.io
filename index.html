@@ -6,27 +6,29 @@
         <meta name="theme-color" content="#F9BB17">
         <title>Centurion Robotics</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="shortcut icon" type="ico" href="/favicon.ico">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="stylesheet" href="styles.css">
         <style>
-            .announcement {
+            #announcement {
                 background: repeating-linear-gradient(
                     135deg,
                     #1A1A1A 0px 30px,
                     black 30px 60px
                 );
+                padding: 20px;
             }
-            .about-section {
+            #about-section {
                 display: flex;
                 flex-direction: row;
                 gap: 40px;
             }
-            .about-section > div {
+            #about-section > div {
                 flex: 1;
             }
-            .about-section img {
+            #about-section img {
                 flex: 1;
                 width: 100%;
                 object-position: center;
@@ -34,11 +36,11 @@
             }
 
             @media only screen and (max-width: 1000px) {
-                .about-section {
+                #about-section {
                     flex-direction: column;
                     align-items: center;
                 }
-                .about-section img {
+                #about-section img {
                     width: 100%;
                 }
             }
@@ -49,10 +51,26 @@
     <body>
         <header>
             <nav>
+                <div>
+                    <div>
+                        <a style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding-right: 10px;" href="/">
+                            <img src='android-chrome-512x512.png' style='height: 70px; width: auto;'>
+                            <h2 style="margin: 0; text-wrap: nowrap;">Centurion Robotics</h2>
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <label for="menu-toggle" style="font-size: 24px;"><i class="fa-solid fa-bars"></i></label>
+                </div>
                 <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" style="font-size: 24px;"><i class="fa-solid fa-bars"></i></label>
-                <ul class="menu">
-                    <li><a href="/">Home</a></li>
+                <ul class="second-menu">
+                    <li><a href="/" class="active">Home</a></li>
                     <li><a href="team.html">Our Team</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
@@ -69,7 +87,7 @@
                 <h2>This website is under construction, please come back later.</h2>
                 <p>If you are a member of our team, please contact Jenson or Nichola to help update our website. Thanks!</p>
             </div>
-             <div class="section announcement">
+             <div class="section" id="announcement">
                 <h3>Registration for the 2026-27 season is now open!</h3>
                 <p>
                     Are you interested in robotics? Do you plan on taking post-secondary education in a STEM related field? Do 
@@ -98,7 +116,7 @@
                 <p>Looking forward to having you in our team in the 2026-27 season!</p>
                 <p style='text-align: right;'>&mdash; Centurion Robotics Leadership Team</p>
             </div>
-            <div class='section about-section'>
+            <div class='section' id="about-section">
                 <div class='about-text'>
                     <h2>Who are we?</h2>
                     <p>
