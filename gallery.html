@@ -2,168 +2,109 @@
 
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#F9BB17">
-        <title>Gallery | Centurion Robotics</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="shortcut icon" type="ico" href="/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="stylesheet" href="styles.css">
+        <meta name = 'viewport' content = 'width = device-width, initial-scale = 1'>
+        <title>Gallery | Centurion Robotics 22689</title>
+        <link rel = 'apple-touch-icon' sizes = '180x180' href = 'images/apple-touch-icon.png'>
+        <link rel = 'shortcut icon' type = 'ico' href = 'images/favicon.ico'>
+        <link rel = 'icon' type = 'image/png' sizes = '32x32' href = 'images/favicon-32x32.png'>
+        <link rel = 'icon' type = 'image/png' sizes = '16x16' href = 'images/favicon-16x16.png'>
+        <link rel = 'manifest' href = 'site.webmanifest'>
+        <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
+        <link rel = 'stylesheet' href = 'styles.css'>
         <style>
-            .season {
+            .season-select {
+                background-color: black;
+                color: ghostwhite;
+                padding: 40px 80px 40px 80px;
+            } hr {
+                background-color: ghostwhite;
+            } .season {
                 display: flex;
-                flex-direction: row;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                align-items: center;
                 gap: 40px;
-            }
-            .season > div {
-                flex: 3;
-            }
-            .season img {
-                flex: 1;
-                width: 100%;
-                object-position: center;
-                object-fit: contain;
-            }
-
-            #grid {
+            } .season img {
+                height: 120px;
+                width: auto;
+            } .gallery {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 20px;
-                flex-direction: row;
-            }
-            #grid > img {
+                background-color: #F9BB17;
+                color: black;
+                padding: 40px 80px 40px 80px;
+                gap: 40px;
+            } .gallery img {
+                height: 200px;
                 width: auto;
-                object-fit: cover;
-                display:flex;
             }
 
-            @media only screen and (max-width: 700px) {
-                .season {
-                    flex-direction: column;
-                    align-items: center;
-                }
+            /* ------------------------------ */
+            /*         MOBILE LAYOUT          */
+            /* ------------------------------ */
+            @media only screen and (max-width: 768px) {
                 .season img {
-                    width: 100%;
+                    display: none;
                 }
             }
         </style>
-        <script defer src="fontawesome/all.min.js"></script>
-        <script defer src="fontawesome/fontawesome.min.js"></script>
     </head>
+
     <body>
-        <header>
+        <header class = 'navigation'>
+            <input type = 'checkbox' id = 'menu-toggle'>
+            <label for = 'menu-toggle' class = 'menu-icon' style = 'font-size: 24px; text-align: left;'><i class = 'fa-solid fa-bars'></i></label>
             <nav>
-                <div>
-                    <div>
-                        <a href="/">
-                            <img src='android-chrome-512x512.png'>
-                            <h2>Centurion Robotics</h2>
-                        </a>
-                    </div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="gallery.html" class="active">Gallery</a></li>
-                        <li><a href="sponsors.html">Sponsors</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <label for="menu-toggle" style="font-size: 24px;"><i class="fa-solid fa-bars"></i></label>
-                </div>
-                <input type="checkbox" id="menu-toggle">
-                <ul class="second-menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="sponsors.html">Sponsors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class = 'menu'>
+                    <li><a href = 'index.html'><span>Home</span></a></li>
+                    <li><a href = 'team.html'><span>Our Team</span></a></li>
+                    <li><a href = 'events.html'><span>Events</span></a></li>
+                    <li><a class = 'current-page'><span>Gallery</span></a></li>
+                    <li><a href = 'sponsors.html'><span>Sponsors</span></a></li>
                 </ul>
             </nav>
+            <p style = 'font-size: 22px; font-weight: 600; text-align: left; text-indent: 3em;'>Gallery</p>
         </header>
-        <main>
-            <h1 style="margin: 0;">
-                Gallery
-            </h1>
-            <div class = 'section season'>
+
+        <main class = 'season-select'>
+            <h1 style = 'font-size: 54px; font-weight: 600;'>Gallery</h1>
+            <div class = 'season'>
                 <img src = 'https://www.firstinspires.org/hs-fs/hubfs/image-library/web/ftc_decode_1240x860.webp?width=630'>
                 <div class = 'season-description'>
-                    <h2>2025-26 Decode</h2>
-                    <p >FTC DECODE&trade; presented by RTX is the 2025-26 season game where teams use robotics to explore artifact-based missions and compete for advancement and awards.</p>
+                    <h2 style = 'font-size: 36px; font-weight: 600;'>2025-26 Decode</h2>
+                    <p style = 'font-size: 18px; font-weight: 300;'>FTC DECODE™ presented by RTX is the 2025-26 season game where teams use robotics to explore artifact-based missions and compete for advancement and awards.</p>
                 </div>
             </div>
-            <div id="grid">
-                <img height="500" src='https://static.wixstatic.com/media/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg/v1/fill/w_843,h_705,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg' alt = 'Friday after school meeting with an early chassis design. From left to right are Ved, Ezra, Manmohit, Allen and Jenson.'>
-                <img height="500" src='https://static.wixstatic.com/media/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg' alt = 'Robot prototyping in a Friday after school meeting. From left to right are Jenson and Manan.'>
-                <img height="500" src='https://static.wixstatic.com/media/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg' alt = 'Testing lift system in a weekend meeting. In the background is Jenson, and outside the frame is Ezra.'>
-            </div>
-            <script>
-                const GAP = 20;
-                const DEFAULT_HEIGHT = 500;
-
-                function resize(e) {
-                    const images = document.getElementById('grid').getElementsByTagName('img');
-
-                    let totalWidth = document.getElementById('grid').getBoundingClientRect().width;
-                    let rowTotalWidth = 0;
-                    let rowImages = [];
-                    for (const image of images) {
-                        image.height = DEFAULT_HEIGHT;
-                        if (rowTotalWidth == 0) {
-                            rowTotalWidth += image.naturalWidth * (DEFAULT_HEIGHT / image.naturalHeight);
-                        } else {
-                            rowTotalWidth += image.naturalWidth * (DEFAULT_HEIGHT / image.naturalHeight) + GAP;
-                        }
-
-                        rowImages.push(image);
-
-                        if (rowTotalWidth > totalWidth) {
-                            let totalRowImageWidth = rowTotalWidth - (rowImages.length - 1) * GAP;
-                            let imageWidths = totalWidth - (rowImages.length - 1) * GAP;
-
-                            rowImages.forEach(image => {
-                                image.height = DEFAULT_HEIGHT * (imageWidths / totalRowImageWidth);
-                                image.style.opacity = '1';
-                            });
-                            
-                            rowTotalWidth = 0;
-                            rowImages = [];
-                        }
-                    }
-                }
-
-                
-                window.addEventListener('resize', resize, { passive: true });
-                window.addEventListener('load', resize);
-            </script>
         </main>
+
+        <main class = 'gallery'>
+            <img src = 'https://static.wixstatic.com/media/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg/v1/fill/w_843,h_705,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg' alt = 'Friday after school meeting with an early chassis design. From left to right are Ved, Ezra, Manmohit, Allen and Jenson.'>
+            <img src = 'https://static.wixstatic.com/media/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg' alt = 'Robot prototyping in a Friday after school meeting. From left to right are Jenson and Manan.'>
+            <img src = 'https://static.wixstatic.com/media/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg' alt = 'Testing lift system in a weekend meeting. In the background is Jenson, and outside the frame is Ezra.'>
+        </main>
+        
         <hr>
         <footer>
-            <div>
-                <div class='footer-left'>
-                    <img src='images/logo.png'>
-                    <div>
-                        <h2>Centurion Robotics</h2>
-                        <p>Team 22689</p>
+            <div class = 'footer-left'>
+                <img src = 'images\logo.png'>
+                <div class = 'footer-left-text'>
+                    <p style = 'font-size: 32px; font-weight: 700; color: #F9BB17;'>Centurion Robotics</p>
+                    <p style = 'font-size: 18px; font-weight: 500; color: #E5D1B1;'>22689</p>
+                    <div class = 'footer-left-link'>
+                        <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i></a>
+                        <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i></a>
+                        <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i></a>
+                        <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i></a>
+                        <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i></a>
                     </div>
                 </div>
-                <div class='footer-center'>
-                    <a href="/">Home</a>
-                    <a href="team.html">Our Team</a>
-                    <a href="events.html">Events</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="sponsors.html">Sponsors</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class='footer-right'>
-                    <a href="mailto:centurionrobots@gmail.com"><span class="footer-right-icon"><i class="fa-solid fa-envelope"></i></span><span>centurionrobots@gmail.com</span></a>
-                    <a href="https://youtube.com/@centurionrobotics"><span class="footer-right-icon"><i class="fa-brands fa-youtube"></i></span><span>@centurionrobotics</span></a>
-                    <a href="https://instagram.com/ftc_22689/"><span class="footer-right-icon"><i class="fa-brands fa-instagram"></i></span><span>@ftc_22689</span></a>
-                    <a href="https://github.com/Centurion-Robotics"><span class="footer-right-icon"><i class="fa-brands fa-github"></i></span><span>Centurion-Robotics</span></a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=99+Killarney+Ave%2C+Winnipeg,+MB+R3T+3B3&query_place_id=ChIJL9J-k2bfwVIR9KO4JF7m0XA"><span class="footer-right-icon"><i class="fa-solid fa-location-dot"></i></span><span>99 Killarney Ave, Winnipeg, MB R3T&nbsp;3B3</span></p>
-                </div>
+            </div>
+            <div class = 'footer-right'>
+                <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i><span> centurionrobots@gmail.com</span></a>
+                <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i><span> @centurionrobotics</span></a>
+                <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i><span> @ftc_22689</span></a>
+                <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i><span> Centurion-Robotics</span></a>
+                <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
             </div>
         </footer>
     </body>
