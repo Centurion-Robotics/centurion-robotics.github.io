@@ -2,195 +2,174 @@
 
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#F9BB17">
-        <title>Our Team | Centurion Robotics</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="shortcut icon" type="ico" href="/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="stylesheet" href="styles.css">
+        <meta name = 'viewport' content = 'width = device-width, initial-scale = 1'>
+        <title>Our Team | Centurion Robotics 22689</title>
+        <link rel = 'apple-touch-icon' sizes = '180x180' href = 'images/apple-touch-icon.png'>
+        <link rel = 'shortcut icon' type = 'ico' href = 'images/favicon.ico'>
+        <link rel = 'icon' type = 'image/png' sizes = '32x32' href = 'images/favicon-32x32.png'>
+        <link rel = 'icon' type = 'image/png' sizes = '16x16' href = 'images/favicon-16x16.png'>
+        <link rel = 'manifest' href = 'site.webmanifest'>
+        <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
+        <link rel = 'stylesheet' href = 'styles.css'>
         <style>
             .team-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                grid-auto-rows: 1fr;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 30px;
-            }
-
-            .team-container > div {
-                background-color: #1a1a1a;
+                padding: 40px 80px 20px 80px;
+            } .member-card {
+                background-color: #1A1A1A;
                 border-bottom: 5px solid #F9BB17;
-                padding: 20px;
+                width: 250px;
+                padding: 30px 20px;
                 text-align: center;
                 border-radius: 15px;
                 transition: all 0.3s ease;
-            }
-
-            .team-container > div:hover {
-                transform: scale(1.02);
-                background-color: #2a2a2a;
-            }
-            .team-container > div > img {
-                width: 175px;
-                height: 175px;
+            } .member-photo {
+                width: 150px;
+                height: 150px;
                 border-radius: 50%;
                 object-fit: cover;
-                margin: 5px;
-            }
-            .team-container > div > h2 {
+                border: 3px solid #F9BB17;
+                margin: 15px;
+            } .member-name {
                 font-size: 28px;
-                margin: 10px 0 5px 0;
-            }
-            .team-container > div > h3 {
-                font-size: 24px;
+                font-weight: 500;
+                margin-top: 10px 0 5px 0;
+            } .member-role {
+                font-size: 18px;
                 color: #E5D1B1;
                 font-weight: 400;
-                margin: 5px 0;
+            }
+
+            /* ------------------------------ */
+            /*         MOBILE LAYOUT          */
+            /* ------------------------------ */
+            @media only screen and (max-width: 768px) {
+                
             }
         </style>
-        <script defer src="fontawesome/all.min.js"></script>
-        <script defer src="fontawesome/fontawesome.min.js"></script>
     </head>
     <body>
-        <header>
+        <header class = 'navigation'>
+            <input type = 'checkbox' id = 'menu-toggle'>
+            <label for = 'menu-toggle' class = 'menu-icon' style = 'font-size: 24px; text-align: left;'><i class = 'fa-solid fa-bars'></i></label>
             <nav>
-                <div>
-                    <div>
-                        <a href="/">
-                            <img src='android-chrome-512x512.png'>
-                            <h2>Centurion Robotics</h2>
-                        </a>
-                    </div>
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="team.html" class="active">Our Team</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="sponsors.html">Sponsors</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <label for="menu-toggle" style="font-size: 24px;"><i class="fa-solid fa-bars"></i></label>
-                </div>
-                <input type="checkbox" id="menu-toggle">
-                <ul class="second-menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="team.html" class="active">Our Team</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="sponsors.html">Sponsors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class = 'menu'>
+                    <li><a href = 'index.html'><span>Home</span></a></li>
+                    <li><a class = 'current-page'><span>Our Team</span></a></li>
+                    <li><a href = 'events.html'><span>Events</span></a></li>
+                    <li><a href = 'gallery.html'><span>Gallery</span></a></li>
+                    <li><a href = 'sponsors.html'><span>Sponsors</span></a></li>
                 </ul>
             </nav>
+            <p style = 'font-size: 22px; font-weight: 600; text-align: left; text-indent: 3em;'>Our Team</p>
         </header>
+
         <main>
-            <h1 style="margin: 0;">
-                Meet Our Team
-            </h1>
-            <div class="team-container">
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg" class="member-photo" alt="Member Name">
-                    <h2>Manan Jindal</h2>
-                    <h3>Team Captain</h3>
+            <h1 style = 'font-size: 54px; font-weight: 600;'>Meet Our Team</h1>
+            <div class = 'team-container'>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg' class = 'member-photo'>
+                    <div class = 'member-name'>Manan Jindal</div>
+                    <div class = 'member-role'>Team Captain</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_6dadc8779e9644f78ae97396ea648c51~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7617_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Nichola Chen</h2>
-                    <h3>Software Team Lead</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_6dadc8779e9644f78ae97396ea648c51~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7617_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Nichola Chen</div>
+                    <div class = 'member-role'>Software Team Lead</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_ebb9a62bd9f64d4a9bc210c383d1488d~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7602_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Saswat Bhandari</h2>
-                    <h3>Mechanical Team Lead</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_ebb9a62bd9f64d4a9bc210c383d1488d~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7602_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Saswat Bhandari</div>
+                    <div class = 'member-role'>Mechanical Team Lead</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_29b75ce9d8da4df399e402695d81b1bd~mv2.png/v1/crop/x_0,y_0,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7581_heic.png" class="member-photo" alt="Member Name">
-                    <h2>Tanveer Saggu</h2>
-                    <h3>Mechanical Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_29b75ce9d8da4df399e402695d81b1bd~mv2.png/v1/crop/x_0,y_0,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7581_heic.png' class = 'member-photo'>
+                    <div class = 'member-name'>Tanveer Saggu</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC" class="member-photo" alt="Member Name">
-                    <h2>Brennan Fehr</h2>
-                    <h3>Software Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC' class = 'member-photo'>
+                    <div class = 'member-name'>Brennan Fehr</div>
+                    <div class = 'member-role'>Software Team Member</div>
                 </div>
-                <div>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC" class="member-photo" alt="Member Name">
-                    <h2>Ben Xue</h2>
-                    <h3>Software Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC' class = 'member-photo'>
+                    <div class = 'member-name'>Ben Xue</div>
+                    <div class = 'member-role'>Software Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_06dbea865e3149b5b2132bf1bcc0b47a~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7607_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Jenson Liu</h2>
-                    <h3>Mechanical Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_06dbea865e3149b5b2132bf1bcc0b47a~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7607_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Jenson Liu</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_908ac956b47548deadd99777ca73e983~mv2.png/v1/crop/x_0,y_184,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7573_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Inioluwa Olorunfemi</h2>
-                    <h3>Software Team Member</h3>
+                <div class = 'member-card'>
+                    <img src= 'https://static.wixstatic.com/media/efa344_908ac956b47548deadd99777ca73e983~mv2.png/v1/crop/x_0,y_184,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7573_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Inioluwa Olorunfemi</div>
+                    <div class = 'member-role'>Software Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_38eec8a2809c44d2a82e1c80aefe7d81~mv2.png/v1/crop/x_604,y_931,w_1866,h_2242/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7611_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Allen Lan</h2>
-                    <h3>Mechanical Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_38eec8a2809c44d2a82e1c80aefe7d81~mv2.png/v1/crop/x_604,y_931,w_1866,h_2242/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7611_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Allen Lan</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_d10999fc32dd4a0da1c20042ccb2f693~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7594_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Manmohit Mahi</h2>
-                    <h3>Mechanical Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_d10999fc32dd4a0da1c20042ccb2f693~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7594_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Manmohit Mahi</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_0a6cf51c938f45c7be6a2e7c3961ea49~mv2.png/v1/crop/x_584,y_906,w_1896,h_2277/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7585_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Ved Lad</h2>
-                    <h3>Mechanical Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_0a6cf51c938f45c7be6a2e7c3961ea49~mv2.png/v1/crop/x_584,y_906,w_1896,h_2277/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7585_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Ved Lad</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/8f3755_7f2942a19592400ab415b4f2905da74e~mv2.jpeg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-30%20at%2023_06_26%202.jpeg" class="member-photo" alt="Member Name">
-                    <h2>Sam Khan</h2>
-                    <h3>Software Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/8f3755_7f2942a19592400ab415b4f2905da74e~mv2.jpeg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-30%20at%2023_06_26%202.jpeg' class = 'member-photo'>
+                    <div class = 'member-name'>Sam Khan</div>
+                    <div class = 'member-role'>Software Team Member</div>
                 </div>
-                    <div>
-                    <img src="https://static.wixstatic.com/media/efa344_67e7d654d56f4c3fa9b619f18460bd8c~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7599_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Ezra Huska</h2>
-                    <h3>Mechanical Team Member</h3>
+                    <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_67e7d654d56f4c3fa9b619f18460bd8c~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7599_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Ezra Huska</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="https://static.wixstatic.com/media/efa344_6bb77db5d5644af7ab41d78946775e52~mv2.png/v1/crop/x_425,y_983,w_2163,h_2599/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7619_HEIC.png" class="member-photo" alt="Member Name">
-                    <h2>Nathan Lee</h2>
-                    <h3>Mechanical Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'https://static.wixstatic.com/media/efa344_6bb77db5d5644af7ab41d78946775e52~mv2.png/v1/crop/x_425,y_983,w_2163,h_2599/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7619_HEIC.png' class = 'member-photo'>
+                    <div class = 'member-name'>Nathan Lee</div>
+                    <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC" class="member-photo" alt="Member Name">
-                    <h2>Sourav Mandal</h2>
-                    <h3>Software Team Member</h3>
+                <div class = 'member-card'>
+                    <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC' class = 'member-photo'>
+                    <div class = 'member-name'>Sourav Mandal</div>
+                    <div class = 'member-role'>Software Team Member</div>
                 </div>
             </div>
         </main>
+
         <hr>
         <footer>
-            <div>
-                <div class='footer-left'>
-                    <img src='images/logo.png'>
-                    <div>
-                        <h2>Centurion Robotics</h2>
-                        <p>Team 22689</p>
+            <div class = 'footer-left'>
+                <img src = 'images\logo.png'>
+                <div class = 'footer-left-text'>
+                    <p style = 'font-size: 32px; font-weight: 700; color: #F9BB17;'>Centurion Robotics</p>
+                    <p style = 'font-size: 18px; font-weight: 500; color: #E5D1B1;'>22689</p>
+                    <div class = 'footer-left-link'>
+                        <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i></a>
+                        <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i></a>
+                        <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i></a>
+                        <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i></a>
+                        <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i></a>
                     </div>
                 </div>
-                <div class='footer-center'>
-                    <a href="/">Home</a>
-                    <a href="team.html">Our Team</a>
-                    <a href="events.html">Events</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="sponsors.html">Sponsors</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class='footer-right'>
-                    <a href="mailto:centurionrobots@gmail.com"><span class="footer-right-icon"><i class="fa-solid fa-envelope"></i></span><span>centurionrobots@gmail.com</span></a>
-                    <a href="https://youtube.com/@centurionrobotics"><span class="footer-right-icon"><i class="fa-brands fa-youtube"></i></span><span>@centurionrobotics</span></a>
-                    <a href="https://instagram.com/ftc_22689/"><span class="footer-right-icon"><i class="fa-brands fa-instagram"></i></span><span>@ftc_22689</span></a>
-                    <a href="https://github.com/Centurion-Robotics"><span class="footer-right-icon"><i class="fa-brands fa-github"></i></span><span>Centurion-Robotics</span></a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=99+Killarney+Ave%2C+Winnipeg,+MB+R3T+3B3&query_place_id=ChIJL9J-k2bfwVIR9KO4JF7m0XA"><span class="footer-right-icon"><i class="fa-solid fa-location-dot"></i></span><span>99 Killarney Ave, Winnipeg, MB R3T&nbsp;3B3</span></p>
-                </div>
+            </div>
+            <div class = 'footer-right'>
+                <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i><span> centurionrobots@gmail.com</span></a>
+                <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i><span> @centurionrobotics</span></a>
+                <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i><span> @ftc_22689</span></a>
+                <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i><span> Centurion-Robotics</span></a>
+                <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
             </div>
         </footer>
     </body>
