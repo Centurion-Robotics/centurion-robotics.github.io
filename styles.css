@@ -6,7 +6,7 @@ body {
     line-height: 1.3;
     overflow-x: hidden;
     background-color: black;
-    color: ghostwhite;
+    color: #E0E0E0;
 } .navigation, .title {
     background-color: #F9BB17;
     color: black;
@@ -20,7 +20,7 @@ body {
     z-index: 1;
     padding: 10px 50px 8px 50px;
 } .title {
-    padding: -20px 50px 40px 50px;
+    padding: 0px 50px 40px 50px;
 } nav {
     margin-top: 10px;
 } nav ul {
@@ -58,7 +58,7 @@ body {
     display: none;
 } main {
     background-color: black;
-    color: ghostwhite;
+    color: #E0E0E0;
     padding: 40px 80px 40px 80px;
 } hr {
     border: none;
@@ -67,7 +67,7 @@ body {
     margin: 0px 0;
 } footer {
     background-color: black;
-    color: ghostwhite;
+    color: #E0E0E0;
     padding: 10px 100px 10px 100px;
     display: flex;
     flex-wrap: wrap;
@@ -108,23 +108,23 @@ body {
     font-size: 15px;
     font-weight: 300;
     vertical-align: middle;
-    color: ghostwhite;
+    color: #E0E0E0;
     text-decoration: none;
     transition: 0.2s all ease-in-out;
     align-items: flex-start;
 } .footer-left-link a:hover {
-    color: #CC5500;
+    color: #F9BB17;
 } .footer-right a {
     text-align: right;
     font-size: 15px;
     font-weight: 300;
     vertical-align: middle;
-    color: ghostwhite;
+    color: #E0E0E0;
     text-decoration: none;
     transition: 0.2s all ease-in-out;
     align-items: flex-start;
 } .footer-right a:hover {
-    color: #CC5500;
+    color: #F9BB17;
 }
 
 /* ------------------------------ */
