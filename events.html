@@ -22,6 +22,110 @@
             @media only screen and (max-width: 768px) {
                 
             }
+
+            /* ------------------------------ */
+            /*           ANIMATION            */
+            /* ------------------------------ */
+            @media (prefers-reduced-motion: no-preference) {
+                main h1 {
+                    opacity: 0;
+                    transform: scale(0, 0, 0);
+                    animation: appear 0.8s ease forwards;
+                    animation-delay: 0.1s;
+                } /*  ....... continue ....... */
+
+                @keyframes moveUp {
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                } @keyframes appear {
+                    100% {
+                        opacity: 1;
+                        transform: scale(100%, 100%, 100%);
+                    }
+                }
+            }
+
+            /* Test */
+            .upcoming-events {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 20px;
+            } main {
+                background: linear-gradient(60deg, #3C3113, #121212);
+                /*animation: movingBackground 5s ease infinite alternate;*/
+            } /*.background {
+                overflow: hidden;
+                position: relative;
+            } .background div {
+                position: absolute;
+                border-radius: 5rem;
+                animation: movingBackground 12s ease infinite alternate;
+            } .background div:nth-child(1) {
+                height: 40%;
+                width: 30%;
+                top: 0%;
+                right: 0%;
+                background-color: #3C3113;
+                animation-delay: 0s;
+            } .background div:nth-child(2) {
+                height: 30%;
+                width: 60%;
+                top: 0%;
+                left: 0%;
+                background-color: #381700;
+                animation-delay: 2s;
+            } .background div:nth-child(3) {
+                height: 40%;
+                width: 20%;
+                bottom: 0%;
+                right: 0%;
+                background-color: #5B4408;
+                animation-delay: 4s;
+            } .background div:nth-child(4) {
+                height: 30%;
+                width: 40%;
+                bottom: 0%;
+                left: 0%;
+                background-color: #250F00;
+                animation-delay: 6s;
+            } .background div:nth-child(5) {
+                height: 50%;
+                width: 30%;
+                top: 12%;
+                right: 12%;
+                background-color: #443306;
+                animation-delay: 8s;
+            } .background div:nth-child(6) {
+                height: 40%;
+                width: 40%;
+                bottom: 12%;
+                left: 12%;
+                background-color: #4A1F00;
+                animation-delay: 10s;
+            } .background::after {
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                backdrop-filter: blur(200px);
+            }
+
+            @keyframes movingBackground {
+                25% {
+                    transform: scale(1.2) translate(80px, 80px);
+                } 50% {
+                    transform: scale(0.8) translate(120px, 0px);
+                } 75% {
+                    transform: scale(1.3) translate(40px, 4px);
+                } 100% {
+                    transform: scale(0.9) translate(0px, 120px);
+                }
+            }*/
         </style>
     </head>
 
@@ -42,60 +146,75 @@
         </header>
 
         <main>
+            <!--<div class = 'background'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>-->
             <h1 style = 'font-size: 54px; font-weight: 600;'>Events</h1>
-            
-            <div class = 'buffalo-jump'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>Buffalo Jump Qualifier</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 30-31, 2026</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>Section under construction...</p>
+            <div class = 'upcoming-events'>
+                <h2 style = 'font-size: 36px; font-weight: 600;'>Upcoming Events</h2>
+                
             </div>
 
-            <div class = 'SJR2026-2'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>Second Practice with St. John's-Ravenscourt</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 28, 2026</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>On January 28th, 2026, we collaborated again with SJR Eagles team 30786 to hold the last practice before we left for the Buffalo Jump Qualifier.
-                    This event allowed both teams to dial in the last bits of our robots and get ready for competition. Through this practice we further strengthed our relationship with SJR Eagles and exchanged game plans.</p>
-            </div>
+            <div class = 'past-events'>
+                <h2 style = 'font-size: 36px; font-weight: 600;'>Past Events</h2>
+                <div class = 'buffalo-jump'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>Buffalo Jump Qualifier</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 30-31, 2026</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Section under construction...</p>
+                </div>
 
-            <div class = 'BH2026'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>Practice with St. John's-Ravenscourt and Balmoral Hall</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 23, 2026</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>On January 23rd, 2026, all three Manitoban FTC teams got together and held the first unofficial Manitoba FTC scrimmage. 
-                    This event allowed all three teams to practice on a full field for the first time. We also got to practice working with other teams to win matches.</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>This historical event showed a significant rise in interest in robotics and STEM related fields amoung high school students across Manitoba over recent years, and we hope the FTC community in Manitoba will continue growing! 
-                    Shout out to Blazebots team 18039 for organizing the event and SJR Eagles team 30786 for participating.</p>
-            </div>
+                <div class = 'SJR2026-2'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>Second Practice with St. John's-Ravenscourt</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 28, 2026</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>On January 28th, 2026, we collaborated again with SJR Eagles team 30786 to hold the last practice before we left for the Buffalo Jump Qualifier.
+                        This event allowed both teams to dial in the last bits of our robots and get ready for competition. Through this practice we further strengthed our relationship with SJR Eagles and exchanged game plans.</p>
+                </div>
 
-            <div class = 'SJR2026-1'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>Practice with St. John's-Ravenscourt</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 18, 2026</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>On January 18th, 2026, we held the first multi-team practice in Manitoba. We combined forces with SJR Eagles team 30786 to make each robot better.
-                    We contributed the mats; they contributed the goal and the artifacts. This allowed us to create a half field. We were able to score our first artifact into the real goal, and they got to drive on the real playing surface. 
-                    At the end of this practice, we traded half of our mats for a selection of their artifacts, mutually benefiting each team.</p>
-            </div>
+                <div class = 'BH2026'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>Practice with St. John's-Ravenscourt and Balmoral Hall</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 23, 2026</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>On January 23rd, 2026, all three Manitoban FTC teams got together and held the first unofficial Manitoba FTC scrimmage. 
+                        This event allowed all three teams to practice on a full field for the first time. We also got to practice working with other teams to win matches.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>This historical event showed a significant rise in interest in robotics and STEM related fields amoung high school students across Manitoba over recent years, and we hope the FTC community in Manitoba will continue growing! 
+                        Shout out to Blazebots team 18039 for organizing the event and SJR Eagles team 30786 for participating.</p>
+                </div>
 
-            <div class = 'north-dakota-scrimmage'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>North Dakota Scrimmage</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>April 6, 2024</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>We were invited to Fargo, ND for a friendly competition! This was the first event our team ever attended. It was a great learning experience for all of us. 
-                    Getting to talk to experienced teams about robot design strategies, talking to mentors about building better team organization, and meeting many like minded students, overall it was an awesome experience.</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>A sincere thanks to FTC Dakota for inviting us to the event, we look forward to even more competitions in the future!</p>
-            </div>
+                <div class = 'SJR2026-1'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>Practice with St. John's-Ravenscourt</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 18, 2026</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>On January 18th, 2026, we held the first multi-team practice in Manitoba. We combined forces with SJR Eagles team 30786 to make each robot better.
+                        We contributed the mats; they contributed the goal and the artifacts. This allowed us to create a half field. We were able to score our first artifact into the real goal, and they got to drive on the real playing surface. 
+                        At the end of this practice, we traded half of our mats for a selection of their artifacts, mutually benefiting each team.</p>
+                </div>
 
-            <div class = 'MSSS2023'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>Manitoba Schools Science Symposium</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>April 22, 2023</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>We did an outreach program at the the Manitoba Schools Science Symposium! 
-                    We had the opportunity to talk to many students, teachers and parents about robotic programs in Manitoba. We also demoed the robot to people who were at the fair.</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>Thank you to the MSSS for having us!</p>
-            </div>
+                <div class = 'north-dakota-scrimmage'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>North Dakota Scrimmage</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>April 6, 2024</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>We were invited to Fargo, ND for a friendly competition! This was the first event our team ever attended. It was a great learning experience for all of us. 
+                        Getting to talk to experienced teams about robot design strategies, talking to mentors about building better team organization, and meeting many like minded students, overall it was an awesome experience.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>A sincere thanks to FTC Dakota for inviting us to the event, we look forward to even more competitions in the future!</p>
+                </div>
 
-            <div class = 'MFNERC2023'>
-                <h2 style = 'font-size: 27px; font-weight: 600;'>Manitoba First Nations Schools Science Fair</h2>
-                <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>March 8, 2023</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>We did an outreach program at the Manitoba First Nations Schools Science Fair! 
-                    We had the opportunity to talk to many students and teachers about robotic programs in Manitoba. We also had a chance to present to Wab Kinew, the leader of the Manitoba NDP.</p>
-                <p style = 'font-size: 18px; font-weight: 400;'>Thank you to the MFNERC for having us!</p>
+                <div class = 'MSSS2023'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>Manitoba Schools Science Symposium</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>April 22, 2023</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>We did an outreach program at the the Manitoba Schools Science Symposium! 
+                        We had the opportunity to talk to many students, teachers and parents about robotic programs in Manitoba. We also demoed the robot to people who were at the fair.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Thank you to the MSSS for having us!</p>
+                </div>
+
+                <div class = 'MFNERC2023'>
+                    <h2 style = 'font-size: 27px; font-weight: 600;'>Manitoba First Nations Schools Science Fair</h2>
+                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>March 8, 2023</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>We did an outreach program at the Manitoba First Nations Schools Science Fair! 
+                        We had the opportunity to talk to many students and teachers about robotic programs in Manitoba. We also had a chance to present to Wab Kinew, the leader of the Manitoba NDP.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Thank you to the MFNERC for having us!</p>
+                </div>
             </div>
         </main>
         

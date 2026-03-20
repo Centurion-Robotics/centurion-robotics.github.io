@@ -12,7 +12,18 @@
         <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
         <link rel = 'stylesheet' href = 'styles.css'>
         <style>
-            main {
+            .title {
+                padding: 20px 50px 40px 50px;
+            } .title h1 {
+                font-size: 84px;
+                font-weight: 800;
+                text-align: center;
+                background-image: url('https://www.azomining.com/images/Article_Images/ImageForArticle_17(3).jpg');
+                background-size: cover;
+                background-clip: text;
+                color: rgba(0, 0, 0, 0.5);
+                margin: 0px;
+            } main {
                 padding-top: 0px;
             } .about-section {
                 display: flex;
@@ -20,7 +31,7 @@
                 gap: 40px;
                 padding-bottom: 72px;
             } .about-section img {
-                width: 500px;
+                width: 45%;
                 align-items: center;
             } .FTC1-section {
                 padding-top: 40px;
@@ -64,6 +75,99 @@
                     align-items: center;
                 } .about-section img {
                     width: 100%;
+                } .title h1 {
+                    font-size: 72px;
+                }
+            }
+
+            /* ------------------------------ */
+            /*           ANIMATION            */
+            /* ------------------------------ */
+            @media (prefers-reduced-motion: no-preference) {
+                .title {
+                    opacity: 0;
+                    transform: translateY(-100%);
+                    animation: moveY 0.5s ease forwards;
+                } .title h1 {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    animation: moveY 0.8s cubic-bezier(0.22, 0.22, 0.18, 0.9) forwards;
+                    animation-delay: 0.45s;
+                } .registration-26-27 {
+                    opacity: 0;
+                    transform: translateY(10px);
+                } .registration-26-27.in-view {
+                    animation: moveY 1.0s ease forwards;
+                    animation-delay: 0.75s;
+                } .about-section .about-text h2 {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                } .about-section .about-text h2.in-view {
+                    animation: moveX 1.0s ease forwards;
+                } .about-section .about-text p {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                } .about-section .about-text p.in-view {
+                    animation: moveX 1.0s ease forwards;
+                    animation-delay: 0.1s;
+                } .about-section img {
+                    opacity: 0;
+                    transform: scale(0.8, 0.8, 0.8);
+                    transform: translateX(100%);
+                } .about-section img.in-view {
+                    animation: fadeIn 1.0s ease forwards;
+                    animation-delay: 0.3s;
+                } .section-divider {
+                    opacity: 0;
+                    transform: translateX(100%);
+                } .section-divider.in-view {
+                    animation: moveX 2.0s cubic-bezier(0, 0.17, 0.43, 1) forwards;
+                } .FTC1-section .FTC1-text h2 {
+                    opacity: 0;
+                    transform: scale(0, 0, 0);
+                } .FTC1-section .FTC1-text h2.in-view {
+                    animation: appear 0.8s ease forwards;
+                } .FTC1-section .FTC1-text p {
+                    opacity: 0;
+                    transform: translateY(10px);
+                } .FTC1-section .FTC1-text p.in-view {
+                    animation: moveY 0.8s ease forwards;
+                    animation-delay: 0.1s;
+                } .FTC2-section .FTC2-text h2 {
+                    opacity: 0;
+                    transform: scale(0, 0, 0);
+                } .FTC2-section .FTC2-text h2.in-view {
+                    animation: appear 0.8s ease forwards;
+                } .FTC2-section .FTC2-text h3, .FTC2-section .FTC2-text p, .FTC2-section .FTC2-text ul li {
+                    opacity: 0;
+                    transform: translateY(10px);
+                } .FTC2-section .FTC2-text h3.in-view, .FTC2-section .FTC2-text p.in-view, .FTC2-section .FTC2-text ul li.in-view {
+                    animation: moveY 0.8s ease forwards;
+                    animation-delay: 0.1s;
+                }
+
+                @keyframes moveX {
+                    100% {
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
+                } @keyframes moveY {
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                } @keyframes appear {
+                    100% {
+                        opacity: 1;
+                        transform: scale(100%, 100%, 100%);
+                    }
+                } @keyframes fadeIn {
+                    100% {
+                        opacity: 1;
+                        transform: scale(100%, 100%, 100%);
+                        transform: translateX(0px);
+                        transform: translateY(0px);
+                    }
                 }
             }
         </style>
@@ -86,13 +190,13 @@
         </header>
 
         <header class = 'title'>
-            <h1 style = 'font-size: 72px; font-weight: 800; text-align: center;'>Centurion Robotics 22689</h1>
+            <h1>Centurion Robotics 22689</h1>
         </header>
 
         <main>
             <!--<p style = 'font-size: 18px; font-weight: 400;'>Website is under construction, take a sneak peek.</p>
             <p style = 'font-size: 18px; font-weight: 100;'>If you are a member of our team, please contact Jenson or Nichola to help update our website. Thanks!</p><br><br>-->
-            <div class = 'registration-26-27'>
+            <div class = 'registration-26-27 animate'>
                 <h3 style = 'font-size: 22px; font-weight: 700;'>Registration for the 2026-27 season is now open!</h3>
                 <p style = 'font-size: 18px; font-weight: 400;'>Are you interested in robotics? Do you plan on taking post-secondary education in a STEM related field? Do you like working in a team environment? Do you want to make new connections and learn important skills? If you said yes to any of the questions above, then Centurion Robotics is the perfect place for you!</p>
                 <p style = 'font-size: 12px; font-weight: 400;'>Still don't know if you should join Centurion Robotics? Then click <a href = 'articles/join-us-2627.html'>here</a> for more reason why you should join us and what positions we will have for the 2026-27 season.</p>
@@ -104,41 +208,41 @@
             
             <div class = 'about-section'>
                 <div class = 'about-text'>
-                    <h2 style = 'font-size: 36px; font-weight: 600;'>Who are we?</h2>
-                    <p style = 'font-size: 18px; font-weight: 400;'>We are a group of Fort Richmond Collegiate students who came together to participate in FIRST Tech Challenge (FTC). We are motivated to design, build, and program robots to win competitions, but we also aim to inspire an interest in STEM among students within Manitoba.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.</p>
+                    <h2 class = 'animate' style = 'font-size: 36px; font-weight: 600;'>Who are we?</h2>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>We are a group of Fort Richmond Collegiate students who came together to participate in FIRST Tech Challenge (FTC). We are motivated to design, build, and program robots to win competitions, but we also aim to inspire an interest in STEM among students within Manitoba.</p>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>As one of three teams in Manitoba, we hope to guide and mentor other teams in their journey into robotics.</p>
                 </div>
-                <img src = 'images\photos\team_photo_qualifier_jan_2026.jpg' alt = 'Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
+                <img class = 'animate' src = 'images\photos\team_photo_qualifier_jan_2026.jpg' alt = 'Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
             </div>
             
-            <div class = 'section-divider'></div>
+            <div class = 'section-divider animate'></div>
             <div class = 'FTC1-section'>
                 <div class = 'FTC1-text'>
-                    <h2 style = 'font-size: 36px; font-weight: 600;'>What is FIRST Tech Challenge?</h2>
-                    <p style = 'font-size: 18px; font-weight: 400;'>It's way more than building robots. FIRST Tech Challenge teams (up to 15 team members, grades 7-12) are challenged to design, build, program, and operate robots to compete in a head-to-head challenge in an alliance format.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, while realizing the value of hard work, innovation, and working as a team.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>The robot kit is reusable from year to year and can be coded using a variety of levels of graphical and Java-based programming.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>Teams design and build robots, raise funds, design and market their team brand, and do community outreach to earn specific awards.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>Each season concludes with regional championship events and an exciting FIRST Championship!</p>
+                    <h2 class = 'animate' style = 'font-size: 36px; font-weight: 600;'>What is FIRST Tech Challenge?</h2>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>It's way more than building robots. FIRST Tech Challenge teams (up to 15 team members, grades 7-12) are challenged to design, build, program, and operate robots to compete in a head-to-head challenge in an alliance format.</p>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, while realizing the value of hard work, innovation, and working as a team.</p>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>The robot kit is reusable from year to year and can be coded using a variety of levels of graphical and Java-based programming.</p>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>Teams design and build robots, raise funds, design and market their team brand, and do community outreach to earn specific awards.</p>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>Each season concludes with regional championship events and an exciting FIRST Championship!</p>
                 </div>
             </div>
             
             <div class = 'FTC2-section'>
                 <div class = 'FTC2-text'>
-                    <h2 style = 'font-size: 36px; font-weight: 600;'>Why is FIRST Tech Challenge important?</h2>
-                    <h3 style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>Students get to:</h3>
+                    <h2 class = 'animate' style = 'font-size: 36px; font-weight: 600;'>Why is FIRST Tech Challenge important?</h2>
+                    <h3 class = 'animate' style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>Students get to:</h3>
                     <ul style = 'font-size: 18px; font-weight: 400;'>
-                        <li>Learn from <b>professional engineers</b></li>
-                        <li>Build and compete with a robot of their <b>own design</b></li>
-                        <li>Learn and use <b>sophisticated software and hardware</b></li>
-                        <li><b>Compete and cooperate</b> in alliances and tournaments</li>
-                        <li>Earn a place in the <b>World Championship</b></li>
-                        <li>Qualify for over <b>$80 million</b> in scholarships</li>
+                        <li class = 'animate'>Learn from <b>professional engineers</b></li>
+                        <li class = 'animate'>Build and compete with a robot of their <b>own design</b></li>
+                        <li class = 'animate'>Learn and use <b>sophisticated software and hardware</b></li>
+                        <li class = 'animate'><b>Compete and cooperate</b> in alliances and tournaments</li>
+                        <li class = 'animate'>Earn a place in the <b>World Championship</b></li>
+                        <li class = 'animate'>Qualify for over <b>$80 million</b> in scholarships</li>
                     </ul>
-                    <h3 style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>FIRST Alumni are:</h3>
+                    <h3 class = 'animate' style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>FIRST Alumni are:</h3>
                     <ul style = 'font-size: 18px; font-weight: 400;'>
-                        <li><b>2.0× more likely</b> to declare a major in Engineering</li>
-                        <li><b>2.1× more likely</b> to declare a major in Computer Science</li>
+                        <li class = 'animate'><b>2.0× more likely</b> to declare a major in Engineering</li>
+                        <li class = 'animate'><b>2.1× more likely</b> to declare a major in Computer Science</li>
                     </ul>
                 </div>
             </div>
@@ -168,5 +272,7 @@
                 <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
             </div>
         </footer>
+        
+        <script src = 'animateIfInView.js'></script>
     </body>
 </html>

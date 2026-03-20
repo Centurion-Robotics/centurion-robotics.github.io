@@ -48,6 +48,65 @@
             @media only screen and (max-width: 768px) {
                 
             }
+
+            /* ------------------------------ */
+            /*           ANIMATION            */
+            /* ------------------------------ */
+            @media (prefers-reduced-motion: no-preference) {
+                main h1 {
+                    opacity: 0;
+                    transform: scale(0, 0, 0);
+                    animation: appear 0.8s ease forwards;
+                    animation-delay: 0.4s;
+                } .team-container .member-card {
+                    opacity: 0;
+                    transform: translateY(45px);
+                } .team-container .member-card.in-view {
+                    animation: moveUp 1.0s ease forwards;
+                } .team-container .member-card:nth-child(1).in-view {
+                    animation-delay: 0.7s;
+                } .team-container .member-card:nth-child(2).in-view {
+                    animation-delay: 0.8s;
+                } .team-container .member-card:nth-child(3).in-view {
+                    animation-delay: 0.9s;
+                } .team-container .member-card:nth-child(4).in-view {
+                    animation-delay: 0.1s;
+                } .team-container .member-card:nth-child(5).in-view {
+                    animation-delay: 0.2s;
+                } .team-container .member-card:nth-child(6).in-view {
+                    animation-delay: 0.3s;
+                } .team-container .member-card:nth-child(7).in-view {
+                    animation-delay: 0.1s;
+                } .team-container .member-card:nth-child(8).in-view {
+                    animation-delay: 0.2s;
+                } .team-container .member-card:nth-child(9).in-view {
+                    animation-delay: 0.3s;
+                } .team-container .member-card:nth-child(10).in-view {
+                    animation-delay: 0.1s;
+                } .team-container .member-card:nth-child(11).in-view {
+                    animation-delay: 0.2s;
+                } .team-container .member-card:nth-child(12).in-view {
+                    animation-delay: 0.3s;
+                } .team-container .member-card:nth-child(13).in-view {
+                    animation-delay: 0.1s;
+                } .team-container .member-card:nth-child(14).in-view {
+                    animation-delay: 0.2s;
+                } .team-container .member-card:nth-child(15).in-view {
+                    animation-delay: 0.3s;
+                }
+
+                @keyframes moveUp {
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                } @keyframes appear {
+                    100% {
+                        opacity: 1;
+                        transform: scale(100%, 100%, 100%);
+                    }
+                }
+            }
         </style>
     </head>
     <body>
@@ -69,77 +128,77 @@
         <main>
             <h1 style = 'font-size: 54px; font-weight: 600;'>Meet Our Team</h1>
             <div class = 'team-container'>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_4fd879dd7b8e4aea9a182068d0ce5fa6~mv2.jpg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7608_edited.jpg' class = 'member-photo'>
                     <div class = 'member-name'>Manan Jindal</div>
                     <div class = 'member-role'>Team Captain</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_6dadc8779e9644f78ae97396ea648c51~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7617_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Nichola Chen</div>
                     <div class = 'member-role'>Software Team Lead</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_ebb9a62bd9f64d4a9bc210c383d1488d~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7602_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Saswat Bhandari</div>
                     <div class = 'member-role'>Mechanical Team Lead</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_29b75ce9d8da4df399e402695d81b1bd~mv2.png/v1/crop/x_0,y_0,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7581_heic.png' class = 'member-photo'>
                     <div class = 'member-name'>Tanveer Saggu</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC' class = 'member-photo'>
                     <div class = 'member-name'>Brennan Fehr</div>
                     <div class = 'member-role'>Software Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC' class = 'member-photo'>
                     <div class = 'member-name'>Ben Xue</div>
                     <div class = 'member-role'>Software Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_06dbea865e3149b5b2132bf1bcc0b47a~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7607_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Jenson Liu</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src= 'https://static.wixstatic.com/media/efa344_908ac956b47548deadd99777ca73e983~mv2.png/v1/crop/x_0,y_184,w_3024,h_3628/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7573_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Inioluwa Olorunfemi</div>
                     <div class = 'member-role'>Software Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_38eec8a2809c44d2a82e1c80aefe7d81~mv2.png/v1/crop/x_604,y_931,w_1866,h_2242/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7611_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Allen Lan</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_d10999fc32dd4a0da1c20042ccb2f693~mv2.png/v1/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7594_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Manmohit Mahi</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_0a6cf51c938f45c7be6a2e7c3961ea49~mv2.png/v1/crop/x_584,y_906,w_1896,h_2277/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7585_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Ved Lad</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/8f3755_7f2942a19592400ab415b4f2905da74e~mv2.jpeg/v1/fill/w_538,h_646,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-30%20at%2023_06_26%202.jpeg' class = 'member-photo'>
                     <div class = 'member-name'>Sam Khan</div>
                     <div class = 'member-role'>Software Team Member</div>
                 </div>
-                    <div class = 'member-card'>
+                    <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_67e7d654d56f4c3fa9b619f18460bd8c~mv2.png/v1/crop/x_0,y_200,w_3024,h_3631/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7599_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Ezra Huska</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'https://static.wixstatic.com/media/efa344_6bb77db5d5644af7ab41d78946775e52~mv2.png/v1/crop/x_425,y_983,w_2163,h_2599/fill/w_538,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7619_HEIC.png' class = 'member-photo'>
                     <div class = 'member-name'>Nathan Lee</div>
                     <div class = 'member-role'>Mechanical Team Member</div>
                 </div>
-                <div class = 'member-card'>
+                <div class = 'member-card animate'>
                     <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAD0lEQVR4AQEEAPv/AAAAAAAEAAFlScNgAAAAAElFTkSuQmCC' class = 'member-photo'>
                     <div class = 'member-name'>Sourav Mandal</div>
                     <div class = 'member-role'>Software Team Member</div>
@@ -171,5 +230,7 @@
                 <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
             </div>
         </footer>
+
+        <script src = 'animateIfInView.js'></script>
     </body>
 </html>
