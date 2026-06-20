@@ -23,6 +23,11 @@
                 text-align: center;
                 border-radius: 15px;
                 background-color: white;
+            } a {
+                color: #F9BB17;
+                text-decoration: underline;
+            } a:hover {
+                cursor: pointer;
             }
 
             /* ------------------------------ */
@@ -51,6 +56,11 @@
                     animation-delay: 0.3s;
                 } .logos div:nth-child(2) {
                     animation-delay: 0.6s;
+                } p {
+                    opacity: 0;
+                    transform: scale(0, 0, 0);
+                    animation: appear 2.0s ease forwards;
+                    animation-delay: 1.0s;
                 }
 
                 @keyframes appear {
@@ -89,6 +99,8 @@
                     <img src = 'images/PTSD_logo.png' style = 'height: 76px; padding-top: 4px;'>
                 </div>
             </div>
+            <br><br>
+            <p>Want to become a sponsor? Contact us at <a href = 'mailto:centurionrobots@gmail.com'>centurionrobots@gmail.com</a>!</p>
         </main>
         
         <hr>
