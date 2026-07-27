@@ -27,12 +27,31 @@
                 padding-top: 0px;
             } .about-section {
                 display: flex;
+                /*flex-wrap: wrap;*/
                 align-items: center;
                 gap: 40px;
-                padding-bottom: 72px;
+                padding-bottom: 20px;
             } .about-section img {
                 width: 45%;
                 align-items: center;
+            } .mission-section {
+                padding-top: 40px;
+                padding-bottom: 72px;
+            } .mission-section .mission-text h3 b {
+                color: #E0E0E0;
+                position: relative;
+            } .mission-section .mission-text h3 b::before {
+                content: 'to provide innovative and accessible STEM opportunities to students in Manitoba.';
+                position: absolute;
+                width: 0%;
+                height: 118%;
+                overflow: hidden;
+                color: #F9BB17;
+                transition: 1s ease-in-out;
+            } .mission-section .mission-text h3 b:hover::before {
+                cursor: default;
+                width: 100%;
+                filter: drop-shadow(0 0 25px #F9BB17);
             } .FTC1-section {
                 padding-top: 40px;
                 padding-bottom: 40px;
@@ -117,11 +136,28 @@
                 } .about-section img.in-view {
                     animation: fadeIn 1.0s ease forwards;
                     animation-delay: 0.3s;
+                } .mission-section .mission-text h2 {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                } .mission-section .mission-text h2.in-view {
+                    animation: moveX 1.0s ease forwards;
+                } .mission-section .mission-text h3 {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                } .mission-section .mission-text h3.in-view {
+                    animation: moveX 1.0s ease forwards;
+                    animation-delay: 0.1s;
+                } .mission-section .mission-text p {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                } .mission-section .mission-text p.in-view {
+                    animation: moveX 1.0s ease forwards;
                 } .section-divider {
                     opacity: 0;
                     transform: translateX(100%);
                 } .section-divider.in-view {
                     animation: moveX 2.0s cubic-bezier(0, 0.17, 0.43, 1) forwards;
+                    animation-delay: 1.2s;
                 } .FTC1-section .FTC1-text h2 {
                     opacity: 0;
                     transform: scale(0, 0, 0);
@@ -214,7 +250,15 @@
                 </div>
                 <img class = 'animate' src = 'images\photos\team_photo_qualifier_jan_2026.jpg' alt = 'Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
             </div>
-            
+
+            <div class = 'mission-section'>
+                <div class = 'mission-text'>
+                    <h2 class = 'animate' style = 'font-size: 36px; font-weight: 600;'>Our Mission</h2>
+                    <h3 class = 'animate' style = 'font-size: 22px; font-weight: 400;'>Our mission is <b style = 'font-weight: 600;'>to provide innovative and accessible STEM opportunities to students in Manitoba.</b></p>
+                    <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>Manitoba deserves more. More STEM extracurriculars, more hands-on learning, more opportunities for students to discover engineering, coding, electrical systems, and design before they ever set foot in a university and without needing to go to private school. Centurion Robotics exists to close that gap; one student at a time.</p>
+                </div>
+            </div>
+
             <div class = 'section-divider animate'></div>
             <div class = 'FTC1-section'>
                 <div class = 'FTC1-text'>
