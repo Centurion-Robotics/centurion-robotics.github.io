@@ -12,121 +12,387 @@
         <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
         <link rel = 'stylesheet' href = 'styles.css'>
         <style>
-            .season-select {
-                background-color: #121212;
-                color: #E0E0E0;
-                padding: 40px 80px 40px 80px;
-            } hr {
-                background-color: #E0E0E0;
-                height: 4px;
-            } .season {
+            /* ------------------------------ */
+            /*        GLOWING BACKGROUND      */
+            /* ------------------------------ */
+            main {
+                background-color: #0b0b0e;
+                background-image:
+                    radial-gradient(circle at 85% 15%, rgba(249, 187, 23, 0.22) 0%, transparent 60%),
+                    radial-gradient(circle at 15% 80%, rgba(212, 143, 14, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(74, 51, 6, 0.4) 0%, transparent 70%);
+                background-attachment: fixed;
+                padding: 60px 40px;
+                min-height: 100vh;
+                color: #ffffff;
+                box-sizing: border-box;
+            }
+
+            .season {
                 display: flex;
-                padding-top: 40px;
                 padding-bottom: 40px;
                 align-items: center;
                 gap: 40px;
-            } .season img {
-                height: 120px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                margin-bottom: 40px;
+            }
+
+            .season img {
+                height: 140px;
                 width: auto;
-            } .gallery {
-                display: flex;
-                flex-wrap: wrap;
-                background-color: #F9BB17;
-                color: #121212;
-                padding: 40px 80px 40px 80px;
-                gap: 40px;
-            } .gallery img {
-                height: 200px;
-                width: auto;
+                border-radius: 12px;
+            }
+
+            /* ------------------------------ */
+            /*      FROSTED GLASS IMAGES      */
+            /* ------------------------------ */
+                        /* ------------------------------ */
+            /*     DYNAMIC MASONRY GRID       */
+            /* ------------------------------ */
+            /* ---------------------------------- */
+            /*    NEW AUTOMATIC MASONRY GRID     */
+            /* ---------------------------------- */
+            .gallery-masonry-grid {
+                /* 1. Force the page to naturally split cards into clean vertical columns */
+                column-count: 3;
+                column-gap: 25px;
+                width: 100%;
+                margin-bottom: 0 auto 50px auto;
+                justify-content: center;
+                max-width: 1200px;
+            }
+
+            /* Base Frosted Glass Container Frame Configuration */
+            .gallery-card {
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(16px) saturate(120%);
+                -webkit-backdrop-filter: blur(16px) saturate(120%);
+                border-radius: 20px;
+                padding: 15px;
+                margin-bottom: 25px; /* Creates clean padding beneath elements */
+
+                /* 2. CRITICAL FIX: Stops cards from breaking apart or splitting into two columns */
+                break-inside: avoid;
+                display: inline-block;
+                width: 100%;
+                box-sizing: border-box;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, border-color 0.3s ease;
+            }
+
+            .gallery-card:hover {
+                transform: translateY(-5px);
+                border-color: #F9BB17; /* Signature team gold highlight accent */
+            }
+
+            /* Let all images and media assets scale naturally to their container size */
+            .gallery-card img,
+            .gallery-card video {
+                width: 100%;
+                height: auto; /* Allows natural portrait or landscape aspect ratios */
+                display: block;
+                border-radius: 12px;
+            }
+
+            /* Polished Text Descriptions Below Images/Clips */
+            .media-caption {
+                margin-top: 12px;
+                font-size: 15px;
+                font-weight: 400;
+                opacity: 0.85;
+                color: #ffffff;
+                line-height: 1.4;
+            }
+
+            /* Responsive Scaling Breakpoints for Smaller Viewports */
+            @media only screen and (max-width: 992px) {
+                .gallery-masonry-grid {
+                    column-count: 2; /* Drops down to 2 tracks on midsize laptops */
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                .gallery-masonry-grid {
+                    column-count: 1; /* Stacks completely vertically into a single track on mobile */
+                }
+            }
+
+            /* ------------------------------ */
+            /*         VIDEO RELEASES         */
+            /* ------------------------------ */
+/* ------------------------------ */
+/*      FIXED VIDEO GRID LAYOUT   */
+/* ------------------------------ */
+            .video-grid {
+                display: grid;
+                /* FIX: Changed 400px to 300px to keep containers proportional within page bounds */
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                width: 100%;
+                max-width: 1200px; /* Keeps the player crisp on ultra-wide desktop monitors */
+                margin-top: 20px;
+                margin-bottom: 60px;
+            }
+
+            .video-card {
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(16px) saturate(120%);
+                -webkit-backdrop-filter: blur(16px) saturate(120%);
+                border-radius: 20px;
+                overflow: hidden;
+                width: 100%; /* Keeps cards properly sized within their column boundaries */
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            }
+
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%; /* Forces strict widescreen 16:9 box rules */
+                height: 0;
+                background: #000000;
+            }
+
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 20px; /* Matches your glass card theme curves */
+            }
+
+
+            .video-info {
+                padding: 20px;
+            }
+
+            .video-info h3 {
+                font-size: 20px;
+                margin-top: 0;
+                margin-bottom: 8px;
+                color: #F9BB17;
             }
 
             /* ------------------------------ */
             /*         MOBILE LAYOUT          */
             /* ------------------------------ */
             @media only screen and (max-width: 768px) {
-                .season img {
-                    display: none;
+                .season {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                main {
+                    padding: 40px 20px;
+                }
+                .video-grid {
+                    grid-template-columns: 1fr;
                 }
             }
 
             /* ------------------------------ */
-            /*           ANIMATION            */
+            /*           ANIMATIONS           */
             /* ------------------------------ */
             @media (prefers-reduced-motion: no-preference) {
                 main h1 {
                     opacity: 0;
-                    transform: scale(0, 0, 0);
+                    transform: scale(0.95);
                     animation: appear 0.8s ease forwards;
                     animation-delay: 0.1s;
-                } .season {
+                }
+                .season {
                     opacity: 0;
-                    transform: translateY(10px);
+                    transform: translateY(15px);
                     animation: moveUp 0.7s ease forwards;
                     animation-delay: 0.3s;
-                } .gallery {
-                    opacity: 0;
-                    transform: translateX(100%);
-                    animation: moveRight 1.5s ease forwards;
-                    animation-delay: 0.5s;
-                } .gallery img {
-                    opacity: 0;
-                    transform: scale(0, 0, 0);
-                    animation: appear 1.2s ease forwards;
-                    animation-delay: 1.9s;
                 }
+                .gallery-card, .video-card {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    animation: moveUp 0.8s ease forwards;
+                }
+                /* Stagger cards smoothly */
+                .gallery-card:nth-child(1) { animation-delay: 0.4s; }
+                .gallery-card:nth-child(2) { animation-delay: 0.5s; }
+                .gallery-card:nth-child(3) { animation-delay: 0.6s; }
+                .video-card:nth-child(1) { animation-delay: 0.7s; }
+                .video-card:nth-child(2) { animation-delay: 0.8s; }
 
                 @keyframes moveUp {
                     100% {
                         opacity: 1;
                         transform: translateY(0px);
                     }
-                } @keyframes appear {
+                }
+                @keyframes appear {
                     100% {
                         opacity: 1;
-                        transform: scale(100%, 100%, 100%);
-                    }
-                } @keyframes moveRight {
-                    100% {
-                        opacity: 1;
-                        transform: translateX(0px);
+                        transform: scale(1);
                     }
                 }
             }
+                        /* ------------------------------ */
+            /*     CONTAINED VIDEO ENGINE     */
+            /* ------------------------------ */
+            .video-grid-container {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 20px;
+                margin-bottom: 60px;
+                box-sizing: border-box;
+            }
+
+            .video-display-card {
+                /* Explicitly locks the maximum width boundary of the video card element */
+                width: 100%;
+                max-width: 500px;
+
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(16px) saturate(120%);
+                -webkit-backdrop-filter: blur(16px) saturate(120%);
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .video-display-card:hover {
+                transform: translateY(-4px);
+                border-color: #F9BB17;
+            }
+
+            /* Responsive 16:9 Aspect Ratio Lock Box */
+            .video-player-frame {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%; /* Mathematical 16:9 aspect ratio standard constraint */
+                height: 0;
+                background: #000000;
+            }
+
+            .video-player-frame iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            .video-caption-panel {
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
         </style>
     </head>
 
     <body>
-        <header class = 'navigation'>
-            <input type = 'checkbox' id = 'menu-toggle'>
-            <label for = 'menu-toggle' class = 'menu-icon' style = 'font-size: 24px; text-align: left;'><i class = 'fa-solid fa-bars'></i></label>
-            <nav>
-                <ul class = 'menu'>
-                    <li><a href = 'index.html'><span>Home</span></a></li>
-                    <li><a href = 'team.html'><span>Our Team</span></a></li>
-                    <li><a href = 'events.html'><span>Events</span></a></li>
-                    <li><a class = 'current-page'><span>Gallery</span></a></li>
-                    <li><a href = 'sponsors.html'><span>Sponsors</span></a></li>
-                </ul>
-            </nav>
-            <p style = 'font-size: 22px; font-weight: 600; text-align: left; text-indent: 3em;'>Gallery</p>
-        </header>
+    <header class="navigation">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon" style="font-size: 24px; text-align: left;"><i class="fa-solid fa-bars"></i></label>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="team.html"><span>Our Team</span></a></li>
+                <li><a href="events.html"><span>Events</span></a></li>
+                <li><a class="current-page"><span>Gallery</span></a></li>
+                <li><a href="sponsors.html"><span>Sponsors</span></a></li>
+            </ul>
+        </nav>
+        <p style="font-size: 22px; font-weight: 600; text-align: left; text-indent: 3em;">Gallery</p>
+    </header>
 
-        <main class = 'season-select'>
-            <h1 style = 'font-size: 54px; font-weight: 600;'>Gallery</h1>
-            <div class = 'season'>
-                <img src = 'https://www.firstinspires.org/hs-fs/hubfs/image-library/web/ftc_decode_1240x860.webp?width=630'>
-                <div class = 'season-description'>
-                    <h2 style = 'font-size: 36px; font-weight: 600;'>2025-26 Decode</h2>
-                    <p style = 'font-size: 18px; font-weight: 300;'>FTC DECODE™ presented by RTX is the 2025-26 season game where teams use robotics to explore artifact-based missions and compete for advancement and awards.</p>
+    <!-- Only one single semantic main container block elements -->
+    <main>
+        <h1 style="font-size: 54px; font-weight: 600; margin-bottom: 20px;">Gallery</h1>
+
+        <div class="season">
+            <img src="https://www.firstinspires.org/hs-fs/hubfs/image-library/web/ftc_decode_1240x860.webp?width=630" alt="Decode Season Banner">
+            <div class="season-description">
+                <h2 style="font-size: 36px; font-weight: 600; margin-bottom: 10px;">2025-26 Decode</h2>
+                <p style="font-size: 18px; font-weight: 300; opacity: 0.85; line-height: 1.5;">FTC DECODE™ presented by RTX is the 2025-26 season game where teams use robotics to explore artifact-based missions and compete for advancement and awards.</p>
+            </div>
+        </div>
+
+        <!-- Integrated Media Collection -->
+        <h2 class="gallery-section-title">Season Media</h2>
+        <div class="gallery-masonry-grid">
+
+            <!-- Wide Card (Landscape Photo) -->
+            <div class="gallery-card wide-card">
+                <img src="https://static.wixstatic.com/media/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg/v1/fill/w_843,h_705,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg" alt="Chassis meeting design">
+                <div class="media-caption">Early Chassis Team Assembly</div>
+            </div>
+            <div class="gallery-card wide-card">
+                <img src="images/photos/assembly.jpg" alt="Chassis meeting design">
+                <div class="media-caption">Early Outtake Assembly</div>
+            </div>
+            <div class="gallery-card wide-card">
+                <img src="images/photos/outtakecad.jpg" alt="Chassis meeting design">
+                <div class="media-caption">Outtake CAD Design</div>
+            </div>
+            <div class="gallery-card wide-card">
+                <img src="images/photos/outtake.jpg" alt="Chassis meeting design">
+                <div class="media-caption">Outtake</div>
+            </div>
+
+            <!-- Tall Card (Portrait Photo) -->
+            <div class="gallery-card tall-card">
+                <img src="https://static.wixstatic.com/media/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg" alt="Robot prototyping session">
+                <div class="media-caption">Intake Prototyping</div>
+            </div>
+
+            <!-- Integrated Short Clip Loop (Behaves exactly like a GIF image) -->
+            <div class="gallery-card tall-card video-loop-card">
+                <!-- Replace with your local MP4 clip path (e.g. videos/lift-test.mp4) -->
+                <video autoplay loop muted playsinline class="masonry-video">
+                    <source src="https://w3schools.com" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="media-caption"><i class="fa-solid fa-play" style="font-size: 12px; margin-right: 5px;"></i> Intake Mechanism Speed Run</div>
+            </div>
+
+            <!-- Tall Card (Portrait Photo) -->
+            <div class="gallery-card tall-card">
+                <img src="https://static.wixstatic.com/media/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg" alt="Testing lift mechanisms">
+                <div class="media-caption">Linear Slide Lift Testing</div>
+            </div>
+            <div class="gallery-card tall-card">
+                <img src="images/photos/intaketest.jpg" alt="Chassis meeting design">
+                <div class="media-caption">Intake Test</div>
+            </div>
+
+        </div>
+
+        <!-- Video Highlights Section -->
+        <h2 class="gallery-section-title" style="margin-top: 50px;">Video Highlights</h2>
+
+        <!-- Enforce separate layout wrapping container -->
+        <div class="video-grid-container">
+            <div class="video-display-card">
+                <div class="video-player-frame">
+                    <!-- Note the structured embed endpoint path with an active video test ID -->
+                    <iframe src="https://youtube.com" title="Centurion Robotics Run" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-caption-panel">
+                    <h3 style="color: #F9BB17; margin: 0 0 8px 0; font-size: 20px;">Robot Mechanism Test Run</h3>
+                    <p style="margin: 0; font-size: 15px; opacity: 0.8; line-height: 1.4;">Testing drive optimization parameters and linear slide stability loops inside the assembly lab workspace.</p>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <main class = 'gallery'>
-            <img src = 'https://static.wixstatic.com/media/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg/v1/fill/w_843,h_705,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg' alt = 'Friday after school meeting with an early chassis design. From left to right are Ved, Ezra, Manmohit, Allen and Jenson.'>
-            <img src = 'https://static.wixstatic.com/media/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg' alt = 'Robot prototyping in a Friday after school meeting. From left to right are Jenson and Manan.'>
-            <img src = 'https://static.wixstatic.com/media/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg' alt = 'Testing lift system in a weekend meeting. In the background is Jenson, and outside the frame is Ezra.'>
-        </main>
+
+<!--        <main class = 'gallery'>-->
+<!--            <img src = 'https://static.wixstatic.com/media/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg/v1/fill/w_843,h_705,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_5ae9eb3aaa1b4d1da93e02363e7d7d4b~mv2.jpg' alt = 'Friday after school meeting with an early chassis design. From left to right are Ved, Ezra, Manmohit, Allen and Jenson.'>-->
+<!--            <img src = 'https://static.wixstatic.com/media/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_96cee4dac1c944f5bfdd59c065d175f7~mv2.jpg' alt = 'Robot prototyping in a Friday after school meeting. From left to right are Jenson and Manan.'>-->
+<!--            <img src = 'https://static.wixstatic.com/media/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg/v1/fill/w_281,h_705,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/efa344_d0ee778fccc24cd88cdea551186c583a~mv2.jpg' alt = 'Testing lift system in a weekend meeting. In the background is Jenson, and outside the frame is Ezra.'>-->
+<!--        </main>-->
         
         <hr>
         <footer>

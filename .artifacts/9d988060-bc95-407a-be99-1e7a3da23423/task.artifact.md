@@ -1,0 +1,7 @@
+- `[x]` Remove stray CSS syntax error (line 177) in `events.html`
+- `[x]` Fix slider drift by adding `gap: 20px` to `.slider-wrapper`
+- `[x]` Implement "Smart Grid" for slides (single column if no image)
+- `[x]` Fix text clipping by adjusting heights and overflow
+- `[x]` Reposition navigation controls to prevent text overlap
+- `[x]` Restore missing pagination dots HTML and styles
+- `[x]` Remove duplicate `sliderDots` ID from footer

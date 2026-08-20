@@ -206,6 +206,106 @@
                     }
                 }
             }
+                        /* Master Grid Layout for Side-By-Side Profiles */
+            .profile-layout-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+
+            /* Glassmorphism Card Frame Foundation (Matches Events/Gallery style exactly) */
+            .recruitment-card-alert,
+            .glass-profile-card,
+            .program-info-card {
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(16px) saturate(120%);
+                -webkit-backdrop-filter: blur(16px) saturate(120%);
+                border-radius: 24px;
+                padding: 35px;
+                box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+                margin-bottom: 40px;
+            }
+
+            /* Bright Call to Action Button Layouts */
+            .action-buttons-track {
+                display: flex;
+                gap: 20px;
+                margin: 25px 0;
+            }
+
+            .cta-primary-btn {
+                background: #F9BB17;
+                color: #0c0c0e;
+                padding: 14px 28px;
+                border-radius: 12px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .cta-primary-btn:hover {
+                background: #ffffff;
+                transform: translateY(-2px);
+            }
+
+            .cta-secondary-btn {
+                background: transparent;
+                color: #ffffff;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 14px 28px;
+                border-radius: 12px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .cta-secondary-btn:hover {
+                border-color: #F9BB17;
+                color: #F9BB17;
+                background: rgba(249, 187, 23, 0.05);
+            }
+
+            /* High Contrast Accent Classes */
+            .card-gold-title {
+                font-size: 26px;
+                color: #F9BB17;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            .mission-highlight {
+                font-size: 20px;
+                font-style: italic;
+                color: #E0E0E0;
+                border-left: 3px solid #F9BB17;
+                padding-left: 15px;
+                margin: 20px 0;
+            }
+
+            .metrics-bullets-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .bullet-item i {
+                color: #F9BB17;
+                margin-right: 10px;
+            }
+
+            /* Responsive Collapse Points for Smaller Viewports */
+            @media only screen and (max-width: 900px) {
+                .profile-layout-grid,
+                .metrics-bullets-grid {
+                    grid-template-columns: 1fr;
+                }
+                .action-buttons-track {
+                    flex-direction: column;
+                }
+            }
+
         </style>
     </head>
 
@@ -254,7 +354,7 @@
             <div class = 'mission-section'>
                 <div class = 'mission-text'>
                     <h2 class = 'animate' style = 'font-size: 36px; font-weight: 600;'>Our Mission</h2>
-                    <h3 class = 'animate' style = 'font-size: 22px; font-weight: 400;'>Our mission is <b style = 'font-weight: 600;'>to provide innovative and accessible STEM opportunities to students in Manitoba.</b></p>
+                    <h3 class = 'animate' style = 'font-size: 22px; font-weight: 400;'>Our mission is <b style = 'font-weight: 600;'>to provide innovative and accessible STEM opportunities to students in Manitoba.</b></h3>
                     <p class = 'animate' style = 'font-size: 18px; font-weight: 400;'>Manitoba deserves more. More STEM extracurriculars, more hands-on learning, more opportunities for students to discover engineering, coding, electrical systems, and design before they ever set foot in a university and without needing to go to private school. Centurion Robotics exists to close that gap; one student at a time.</p>
                 </div>
             </div>
