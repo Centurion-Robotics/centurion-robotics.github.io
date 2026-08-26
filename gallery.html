@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name = 'viewport' content = 'width = device-width, initial-scale = 1'>
         <title>Gallery | Centurion Robotics 22689</title>
         <link rel = 'apple-touch-icon' sizes = '180x180' href = 'images/apple-touch-icon.png'>
@@ -121,9 +122,6 @@
             /* ------------------------------ */
             /*         VIDEO RELEASES         */
             /* ------------------------------ */
-/* ------------------------------ */
-/*      FIXED VIDEO GRID LAYOUT   */
-/* ------------------------------ */
             .video-grid {
                 display: grid;
                 /* FIX: Changed 400px to 300px to keep containers proportional within page bounds */
@@ -233,7 +231,7 @@
                     }
                 }
             }
-                        /* ------------------------------ */
+            /* ------------------------------ */
             /*     CONTAINED VIDEO ENGINE     */
             /* ------------------------------ */
             .video-grid-container {
@@ -337,6 +335,10 @@
                 <div class="media-caption">Outtake CAD Design</div>
             </div>
             <div class="gallery-card wide-card">
+                <img src="images/photos/buffalojump2.jpg" alt="Chassis meeting design">
+                <div class="media-caption">Buffalo Jump Qualifier</div>
+            </div>
+            <div class="gallery-card wide-card">
                 <img src="images/photos/outtake.jpg" alt="Chassis meeting design">
                 <div class="media-caption">Outtake</div>
             </div>
@@ -376,7 +378,6 @@
         <div class="video-grid-container">
             <div class="video-display-card">
                 <div class="video-player-frame">
-                    <!-- Note the structured embed endpoint path with an active video test ID -->
                     <iframe src="https://youtube.com" title="Centurion Robotics Run" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-caption-panel">

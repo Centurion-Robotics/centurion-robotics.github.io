@@ -109,7 +109,7 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
-            min-height: 350px; /* Gives typography room to breathe */
+            min-height: 350px;
         }
 
         /* Forces the date to anchor neatly near the bottom left */
@@ -124,19 +124,18 @@
             height: 400px;
             object-fit: cover;
             border-radius: 12px;
-            object-position: center 15%; /* Perfect framing for the team shot */
+            object-position: center 15%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        /* Update your main slider button styling rule */
         .slider-btn {
-            background: #F9BB17;              /* Solid Team Yellow Background */
-            border: 2px solid #F9BB17;        /* Clean Yellow Boundary Border */
-            color: #121212;                   /* High-Contrast Dark Arrow Icon */
+            background: #F9BB17;
+            border: 2px solid #F9BB17;
+            color: #121212;
 
             /* Perfect Circle Properties */
-            width: 50px;                      /* Forces a exact width boundary */
-            height: 50px;                     /* Forces an exact height boundary */
-            border-radius: 50%;               /* Turns the square shape into a perfect circle */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
 
             /* Layout Centering Alignment */
             display: flex;
@@ -146,28 +145,28 @@
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-size: 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Gives depth over background text */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             pointer-events: auto;
         }
 
         /* Polished Hover Effect state */
         .slider-btn:hover {
-            background: #ffffff;              /* Flips color palette to white on mouse over */
+            background: #ffffff;
             border-color: #ffffff;
             color: #121212;
-            transform: translateY(-50%) scale(1.1); /* Combines position offset with expansion scale */
+            transform: translateY(-50%) scale(1.1);
         }
         /* Reposition control anchor bounds */
         .slider-controls {
             position: absolute;
             top: 50%;
-            left: -25px;                      /* Pulls left button slightly off-edge for a modern look */
-            right: -25px;                     /* Pulls right button slightly off-edge for a modern look */
-            transform: translateY(-50%);      /* Centers alignment point vertically */
+            left: -25px;
+            right: -25px;
+            transform: translateY(-50%);
             display: flex;
-            justify-content: space-between;   /* Pin-drops buttons to opposite horizontal poles */
-            pointer-events: none;             /* Prevents invisible container block from blocking link selections */
-            z-index: 10;                      /* Keeps controls floating above image stacks */
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 10;
         }
 
         /* Ensure individual buttons maintain vertical alignment center adjustments */
