@@ -1,247 +1,474 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name = 'viewport' content = 'width = device-width, initial-scale = 1'>
-        <title>Events | Centurion Robotics 22689</title>
-        <link rel = 'apple-touch-icon' sizes = '180x180' href = 'images/apple-touch-icon.png'>
-        <link rel = 'shortcut icon' type = 'ico' href = 'images/favicon.ico'>
-        <link rel = 'icon' type = 'image/png' sizes = '32x32' href = 'images/favicon-32x32.png'>
-        <link rel = 'icon' type = 'image/png' sizes = '16x16' href = 'images/favicon-16x16.png'>
-        <link rel = 'manifest' href = 'site.webmanifest'>
-        <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
-        <link rel = 'stylesheet' href = 'styles.css'>
-        <style>
-            main div {
-                padding-bottom: 30px;
-            }
+<head>
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1'>
+    <title>Events | Centurion Robotics 22689</title>
+    <link rel = 'apple-touch-icon' sizes = '180x180' href = 'images/apple-touch-icon.png'>
+    <link rel = 'shortcut icon' type = 'ico' href = 'images/favicon.ico'>
+    <link rel = 'icon' type = 'image/png' sizes = '32x32' href = 'images/favicon-32x32.png'>
+    <link rel = 'icon' type = 'image/png' sizes = '16x16' href = 'images/favicon-16x16.png'>
+    <link rel = 'manifest' href = 'site.webmanifest'>
+    <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
+    <link rel = 'stylesheet' href = 'styles.css'>
+    <style>
+        main div {
+            padding-bottom: 30px;
+        }
 
-            /* ------------------------------ */
-            /*         MOBILE LAYOUT          */
-            /* ------------------------------ */
-            @media only screen and (max-width: 768px) {
-                
-            }
+        /* ------------------------------ */
+        /*         MOBILE LAYOUT          */
+        /* ------------------------------ */
+        @media only screen and (max-width: 768px) {
 
-            /* ------------------------------ */
-            /*           ANIMATION            */
-            /* ------------------------------ */
-            @media (prefers-reduced-motion: no-preference) {
-                main h1 {
-                    opacity: 0;
-                    transform: scale(0, 0, 0);
-                    animation: appear 0.8s ease forwards;
-                    animation-delay: 0.1s;
-                } /*  ....... continue ....... */
+        }
 
-                @keyframes moveUp {
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
-                } @keyframes appear {
-                    100% {
-                        opacity: 1;
-                        transform: scale(100%, 100%, 100%);
-                    }
+        /* ------------------------------ */
+        /*           ANIMATION            */
+        /* ------------------------------ */
+        @media (prefers-reduced-motion: no-preference) {
+            main h1 {
+                opacity: 0;
+                transform: scale(0, 0, 0);
+                animation: appear 0.8s ease forwards;
+                animation-delay: 0.1s;
+            } /*  ....... continue ....... */
+
+            @keyframes moveUp {
+                100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            } @keyframes appear {
+                100% {
+                    opacity: 1;
+                    transform: scale(100%, 100%, 100%);
                 }
             }
+        }
 
-            /* Test */
-            .upcoming-events {
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(10px);
-                padding-left: 20px;
-                padding-right: 20px;
-                border-radius: 20px;
-            } main {
-                background: linear-gradient(60deg, #3C3113, #121212);
-                /*animation: movingBackground 5s ease infinite alternate;*/
-            } /*.background {
-                overflow: hidden;
-                position: relative;
-            } .background div {
-                position: absolute;
-                border-radius: 5rem;
-                animation: movingBackground 12s ease infinite alternate;
-            } .background div:nth-child(1) {
-                height: 40%;
-                width: 30%;
-                top: 0%;
-                right: 0%;
-                background-color: #3C3113;
-                animation-delay: 0s;
-            } .background div:nth-child(2) {
-                height: 30%;
-                width: 60%;
-                top: 0%;
-                left: 0%;
-                background-color: #381700;
-                animation-delay: 2s;
-            } .background div:nth-child(3) {
-                height: 40%;
-                width: 20%;
-                bottom: 0%;
-                right: 0%;
-                background-color: #5B4408;
-                animation-delay: 4s;
-            } .background div:nth-child(4) {
-                height: 30%;
-                width: 40%;
-                bottom: 0%;
-                left: 0%;
-                background-color: #250F00;
-                animation-delay: 6s;
-            } .background div:nth-child(5) {
-                height: 50%;
-                width: 30%;
-                top: 12%;
-                right: 12%;
-                background-color: #443306;
-                animation-delay: 8s;
-            } .background div:nth-child(6) {
-                height: 40%;
-                width: 40%;
-                bottom: 12%;
-                left: 12%;
-                background-color: #4A1F00;
-                animation-delay: 10s;
-            } .background::after {
-                position: absolute;
-                content: '';
-                height: 100%;
-                width: 100%;
-                backdrop-filter: blur(200px);
+        /* Test */
+        .upcoming-events {
+            background: rgba(255, 255, 255, 0.03) !important; /* Semi-transparent white */
+            border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Sharp, glassy edge */
+            backdrop-filter: blur(16px) saturate(120%) !important; /* Strong frosted glass blur */
+            -webkit-backdrop-filter: blur(16px) saturate(120%);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Soft shadow beneath cards */
+            padding: 30px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+        }
+        .past-events {
+            background: rgba(255, 255, 255, 0.03) !important; /* Semi-transparent white */
+            border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Sharp, glassy edge */
+            backdrop-filter: blur(16px) saturate(120%) !important; /* Strong frosted glass blur */
+            -webkit-backdrop-filter: blur(16px) saturate(120%);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Soft shadow beneath cards */
+            padding: 30px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+        }
+
+        /* Slider Styles */
+        /* Update your slide to be a two-column grid */
+        /* Slider Engine - Crucial structural blocks that were commented out */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 20px; /* Essential: must match JS calculation */
+        }
+
+        /* Slide Item Configuration */
+        .slide {
+            display: grid;
+            /* Smart layout: single column by default, two if enough space/content */
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 30px;
+            align-items: center;
+            width: 100%;
+            flex-shrink: 0;
+            min-width: 100%;
+                       /* Critical: forces slides to stand side-by-side */
+            box-sizing: border-box;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Layout Management Inside the Slide */
+        .slide-text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            min-height: 350px;
+        }
+
+        /* Forces the date to anchor neatly near the bottom left */
+        .slide-text-content .event-date {
+            margin-top: auto;
+            opacity: 0.6;
+            font-size: 0.95rem;
+        }
+
+        .slider-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            object-position: center 15%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .slider-btn {
+            background: #F9BB17;
+            border: 2px solid #F9BB17;
+            color: #121212;
+
+            /* Perfect Circle Properties */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            /* Layout Centering Alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            pointer-events: auto;
+        }
+
+        /* Polished Hover Effect state */
+        .slider-btn:hover {
+            background: #ffffff;
+            border-color: #ffffff;
+            color: #121212;
+            transform: translateY(-50%) scale(1.1);
+        }
+        /* Reposition control anchor bounds */
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            left: -25px;
+            right: -25px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Ensure individual buttons maintain vertical alignment center adjustments */
+        .slider-btn {
+            transform: translateY(-50%);
+        }
+
+
+        /* Creates a balanced dark glass effect for slides missing photos */
+        .placeholder-box {
+            height: 380px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        /* Responsive breakpoint for small devices */
+        @media only screen and (max-width: 992px) {
+            .slide {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
+            .slider-container img {
+                height: 300px;
+            }
+        }
 
-            @keyframes movingBackground {
-                25% {
-                    transform: scale(1.2) translate(80px, 80px);
-                } 50% {
-                    transform: scale(0.8) translate(120px, 0px);
-                } 75% {
-                    transform: scale(1.3) translate(40px, 4px);
-                } 100% {
-                    transform: scale(0.9) translate(0px, 120px);
-                }
-            }*/
-        </style>
-    </head>
+         main {
+             /* 1. Deep charcoal-black base */
+            background-color: #0c0c0e;
 
-    <body>
-        <header class = 'navigation'>
-            <input type = 'checkbox' id = 'menu-toggle'>
-            <label for = 'menu-toggle' class = 'menu-icon' style = 'font-size: 24px; text-align: left;'><i class = 'fa-solid fa-bars'></i></label>
-            <nav>
-                <ul class = 'menu'>
-                    <li><a href = 'index.html'><span>Home</span></a></li>
-                    <li><a href = 'team.html'><span>Our Team</span></a></li>
-                    <li><a class = 'current-page'><span>Events</span></a></li>
-                    <li><a href = 'gallery.html'><span>Gallery</span></a></li>
-                    <li><a href = 'sponsors.html'><span>Sponsors</span></a></li>
-                </ul>
-            </nav>
-            <p style = 'font-size: 22px; font-weight: 600; text-align: left; text-indent: 3em;'>Events</p>
-        </header>
+            /* 2. Layered ambient glows matching the older version's warmth */
+            background-image:
+                radial-gradient(circle at 80% 20%, rgba(249, 187, 23, 0.22) 0%, transparent 60%),
+                radial-gradient(circle at 20% 80%, rgba(212, 143, 14, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(74, 51, 6, 0.4) 0%, transparent 70%);
 
-        <main>
-            <!--<div class = 'background'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>-->
-            <h1 style = 'font-size: 54px; font-weight: 600;'>Events</h1>
-            <!----><p style = 'font-size: 18px; font-weight: 800; color: #F9BB17;'>Page under construction, please come back later.</p><br>
-            <div class = 'upcoming-events'>
-                <h2 style = 'font-size: 36px; font-weight: 600;'>Upcoming Events</h2>
-                
-            </div>
+            background-attachment: fixed; /* Keeps the glowing nodes from moving out of place when scrolling */
+            padding: 60px 20px;
+            min-height: 100vh;
+            color: #ffffff;
+        } /*.background {
+            overflow: hidden;
+            position: relative;
+        } .background div {
+            position: absolute;
+            border-radius: 5rem;
+            animation: movingBackground 12s ease infinite alternate;
+        } .background div:nth-child(1) {
+            height: 40%;
+            width: 30%;
+            top: 0%;
+            right: 0%;
+            background-color: #3C3113;
+            animation-delay: 0s;
+        } .background div:nth-child(2) {
+            height: 30%;
+            width: 60%;
+            top: 0%;
+            left: 0%;
+            background-color: #381700;
+            animation-delay: 2s;
+        } .background div:nth-child(3) {
+            height: 40%;
+            width: 20%;
+            bottom: 0%;
+            right: 0%;
+            background-color: #5B4408;
+            animation-delay: 4s;
+        } .background div:nth-child(4) {
+            height: 30%;
+            width: 40%;
+            bottom: 0%;
+            left: 0%;
+            background-color: #250F00;
+            animation-delay: 6s;
+        } .background div:nth-child(5) {
+            height: 50%;
+            width: 30%;
+            top: 12%;
+            right: 12%;
+            background-color: #443306;
+            animation-delay: 8s;
+        } .background div:nth-child(6) {
+            height: 40%;
+            width: 40%;
+            bottom: 12%;
+            left: 12%;
+            background-color: #4A1F00;
+            animation-delay: 10s;
+        } .background::after {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            backdrop-filter: blur(200px);
+        }
 
-            <div class = 'past-events'>
-                <h2 style = 'font-size: 36px; font-weight: 600;'>Past Events</h2>
-                <div class = 'buffalo-jump'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>Buffalo Jump Qualifier</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 30-31, 2026</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>Section under construction...</p>
-                </div>
+        @keyframes movingBackground {
+            25% {
+                transform: scale(1.2) translate(80px, 80px);
+            } 50% {
+                transform: scale(0.8) translate(120px, 0px);
+            } 75% {
+                transform: scale(1.3) translate(40px, 4px);
+            } 100% {
+                transform: scale(0.9) translate(0px, 120px);
+            }
+        }*/
+    </style>
+</head>
 
-                <div class = 'SJR2026-2'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>Second Practice with St. John's-Ravenscourt</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 28, 2026</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>On January 28th, 2026, we collaborated again with SJR Eagles team 30786 to hold the last practice before we left for the Buffalo Jump Qualifier.
-                        This event allowed both teams to dial in the last bits of our robots and get ready for competition. Through this practice we further strengthed our relationship with SJR Eagles and exchanged game plans.</p>
-                </div>
+<body>
+<header class = 'navigation'>
+    <input type = 'checkbox' id = 'menu-toggle'>
+    <label for = 'menu-toggle' class = 'menu-icon' style = 'font-size: 24px; text-align: left;'><i class = 'fa-solid fa-bars'></i></label>
+    <nav>
+        <ul class = 'menu'>
+            <li><a href = 'index.html'><span>Home</span></a></li>
+            <li><a href = 'team.html'><span>Our Team</span></a></li>
+            <li><a class = 'current-page'><span>Events</span></a></li>
+            <li><a href = 'gallery.html'><span>Gallery</span></a></li>
+            <li><a href = 'sponsors.html'><span>Sponsors</span></a></li>
+        </ul>
+    </nav>
+    <p style = 'font-size: 22px; font-weight: 600; text-align: left; text-indent: 3em;'>Events</p>
+</header>
 
-                <div class = 'BH2026'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>Practice with St. John's-Ravenscourt and Balmoral Hall</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 23, 2026</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>On January 23rd, 2026, all three Manitoban FTC teams got together and held the first unofficial Manitoba FTC scrimmage. 
-                        This event allowed all three teams to practice on a full field for the first time. We also got to practice working with other teams to win matches.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>This historical event showed a significant rise in interest in robotics and STEM related fields amoung high school students across Manitoba over recent years, and we hope the FTC community in Manitoba will continue growing! 
-                        Shout out to Blazebots team 18039 for organizing the event and SJR Eagles team 30786 for participating.</p>
-                </div>
+<main>
+    <!--<div class = 'background'>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>-->
+    <h1 style = 'font-size: 54px; font-weight: 600;'>Events</h1>
+    <!--            &lt;!&ndash;&ndash;&gt;<p style = 'font-size: 18px; font-weight: 800; color: #F9BB17;'>Page under construction, please come back later.</p><br>-->
+    <div class = 'upcoming-events'>
+        <h2 style = 'font-size: 36px; font-weight: 600;'>Upcoming Events</h2>
 
-                <div class = 'SJR2026-1'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>Practice with St. John's-Ravenscourt</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>January 18, 2026</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>On January 18th, 2026, we held the first multi-team practice in Manitoba. We combined forces with SJR Eagles team 30786 to make each robot better.
-                        We contributed the mats; they contributed the goal and the artifacts. This allowed us to create a half field. We were able to score our first artifact into the real goal, and they got to drive on the real playing surface. 
-                        At the end of this practice, we traded half of our mats for a selection of their artifacts, mutually benefiting each team.</p>
-                </div>
+    </div>
 
-                <div class = 'north-dakota-scrimmage'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>North Dakota Scrimmage</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>April 6, 2024</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>We were invited to Fargo, ND for a friendly competition! This was the first event our team ever attended. It was a great learning experience for all of us. 
-                        Getting to talk to experienced teams about robot design strategies, talking to mentors about building better team organization, and meeting many like minded students, overall it was an awesome experience.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>A sincere thanks to FTC Dakota for inviting us to the event, we look forward to even more competitions in the future!</p>
-                </div>
+    <div class="past-events">
+        <h2 style="font-size: 36px; font-weight: 600;">Past Events</h2>
 
-                <div class = 'MSSS2023'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>Manitoba Schools Science Symposium</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>April 22, 2023</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>We did an outreach program at the the Manitoba Schools Science Symposium! 
-                        We had the opportunity to talk to many students, teachers and parents about robotic programs in Manitoba. We also demoed the robot to people who were at the fair.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>Thank you to the MSSS for having us!</p>
-                </div>
+        <!-- Controls sit cleanly at the top of the single container layout -->
+        <div class="slider-controls">
+            <button class="slider-btn" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
 
-                <div class = 'MFNERC2023'>
-                    <h2 style = 'font-size: 27px; font-weight: 600;'>Manitoba First Nations Schools Science Fair</h2>
-                    <p style = 'font-size: 18px; font-weight: 100; margin-top: -20px; margin-bottom: 30px;'>March 8, 2023</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>We did an outreach program at the Manitoba First Nations Schools Science Fair! 
-                        We had the opportunity to talk to many students and teachers about robotic programs in Manitoba. We also had a chance to present to Wab Kinew, the leader of the Manitoba NDP.</p>
-                    <p style = 'font-size: 18px; font-weight: 400;'>Thank you to the MFNERC for having us!</p>
-                </div>
-            </div>
-        </main>
-        
-        <hr>
-        <footer>
-            <div class = 'footer-left'>
-                <img src = 'images\logo.png'>
-                <div class = 'footer-left-text'>
-                    <p style = 'font-size: 32px; font-weight: 700; color: #F9BB17;'>Centurion Robotics</p>
-                    <p style = 'font-size: 18px; font-weight: 500; color: #E5D1B1;'>22689</p>
-                    <div class = 'footer-left-link'>
-                        <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i></a>
-                        <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i></a>
-                        <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i></a>
-                        <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i></a>
-                        <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i></a>
+        <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+
+                <!-- Slide 1: Buffalo Jump (With dynamic placeholder) -->
+                <div class="slide buffalo-jump">
+                    <div class="slide-text-content">
+                        <h2 style="font-size: 27px; font-weight: 600;">Buffalo Jump Qualifier</h2>
+                        <p style="font-size: 18px; font-weight: 100; margin-top: -10px; margin-bottom: 20px;">January 30-31, 2026</p>
+                        <p style="font-size: 18px; font-weight: 400;">Section under construction...</p>
+                    </div>
+                    <!-- Clean empty div satisfies the 2-column grid layout nicely -->
+                    <div class="slide-image-content">
+                        <img src="images/photos/Buffalojump.jpg" alt="Buffalo Jump Qualifiers 2026">
                     </div>
                 </div>
+
+                <!-- Slide 2: BH Scrimmage -->
+                <div class="slide BH2026">
+                    <div class="slide-text-content">
+                        <h2 style="font-size: 27px; font-weight: 600;">Practice with St. John's-Ravenscourt and Balmoral Hall</h2>
+                        <p style="font-size: 18px; font-weight: 100; margin-top: -10px; margin-bottom: 20px;">January 23, 2026</p>
+                        <p style="font-size: 18px; font-weight: 400;">On January 23rd, 2026, all three Manitoban FTC teams got together and held the first unofficial Manitoba FTC scrimmage. This historical event showed a significant rise in interest in robotics and STEM across Manitoba.</p>
+                    </div>
+                    <div class="slide-image-content">
+                        <img src="images/photos/SJR1.png" alt="SJR 1st Practice">
+                    </div>
+                </div>
+
+                <!-- Slide 3: SJR Practice 2 -->
+                <div class="slide SJR2026-2">
+                    <div class="slide-text-content">
+                        <h2 style="font-size: 27px; font-weight: 600;">Second Practice with St. John's-Ravenscourt</h2>
+                        <p style="font-size: 18px; font-weight: 100; margin-top: -10px; margin-bottom: 20px;">January 28, 2026</p>
+                        <p style="font-size: 18px; font-weight: 400;">On January 28th, 2026, we collaborated again with SJR Eagles team 30786 to hold the last practice before we left for the Buffalo Jump Qualifier. This event allowed both teams to dial in the last bits of our robots and get ready for competition.</p>
+                    </div>
+                    <div class="slide-image-content">
+                        <img src="images/photos/SJR2.jpg" alt="SJR 2nd Practice">
+                    </div>
+                </div>
+
+                <!-- Slide 4: Fargo, North Dakota Scrimmage - Apr. 6th, 2024 -->
+                <div class="slide NDS2024">
+                    <div class="slide-text-content">
+                        <h2 style="font-size: 27px; font-weight: 600;">Fargo, North Dakota Scrimmage</h2>
+                        <p style="font-size: 18px; font-weight: 100; margin-top: -10px; margin-bottom: 20px;">Apr. 6th, 2024</p>
+                        <p style="font-size: 18px; font-weight: 400;">We were invited to Fargo, ND for a friendly competition! It was a great learning experience for all of us. Getting to talk to experienced teams about robot design strategies, talking to mentors about building better team organization, and meeting many like-minded students, overall it was an awesome experience.</p>
+                        <p style="font-size: 18px; font-weight: 400;">A sincere thanks to FTC Dakota for inviting us to the event, we look forward to even more competitions in the future!</p>
+                    </div>
+                    <div class="slide-image-content">
+                        <img src="images/photos/Fargo.jpg" alt="Fargo 2024 Group Photo">
+                    </div>
+                </div>
+
+                <!-- Slide 5: MSSS-  -->
+                <div class="slide MFNERC2023">
+                    <div class="slide-text-content">
+                        <h2 style="font-size: 27px; font-weight: 600;">Manitoba Schools Science Symposium </h2>
+                        <p style="font-size: 18px; font-weight: 100; margin-top: -10px; margin-bottom: 20px;">Apr. 22nd, 2023</p>
+                        <p style="font-size: 18px; font-weight: 400;">We did an outreach program at the Manitoba Schools Science Symposium! We had the opportunity to talk to many students, teachers and parents about robotic programs in Manitoba. We also demoed the robot to people  present at the fair..</p>
+                        <p style="font-size: 18px; font-weight: 400;">Thank you to the MSSS for having us!</p>
+                    </div>
+                    <div class="slide-image-content">
+                        <img src="images/photos/MSSS.jpg" alt="MSSS 2023 Group Photo">
+                    </div>
+                </div>
+
+
+                <!-- Slide 6: MFNERC Group Photo (Framing perfectly now) -->
+                <div class="slide MFNERC2023">
+                    <div class="slide-text-content">
+                        <h2 style="font-size: 27px; font-weight: 600;">Manitoba First Nations Schools Science Fair</h2>
+                        <p style="font-size: 18px; font-weight: 100; margin-top: -10px; margin-bottom: 20px;">March 8, 2023</p>
+                        <p style="font-size: 18px; font-weight: 400;">We did an outreach program at the Manitoba First Nations Schools Science Fair! We had the opportunity to talk to many students and teachers about robotic programs in Manitoba. We also had a chance to present to Wab Kinew, the leader of the Manitoba NDP.</p>
+                        <p style="font-size: 18px; font-weight: 400;">Thank you to the MFNERC for having us!</p>
+                    </div>
+                    <div class="slide-image-content">
+                        <img src="images/photos/MFNSevent1.jpg" alt="MFNERC 2023 Group Photo">
+                    </div>
+                </div>
+
             </div>
-            <div class = 'footer-right'>
-                <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i><span> centurionrobots@gmail.com</span></a>
-                <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i><span> @centurionrobotics</span></a>
-                <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i><span> @ftc_22689</span></a>
-                <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i><span> Centurion-Robotics</span></a>
-                <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
+        </div>
+    </div>
+
+
+</main>
+
+<hr>
+<footer>
+    <div class = 'footer-left'>
+        <img src = 'images\logo.png'>
+        <div class = 'footer-left-text'>
+            <p style = 'font-size: 32px; font-weight: 700; color: #F9BB17;'>Centurion Robotics</p>
+            <p style = 'font-size: 18px; font-weight: 500; color: #E5D1B1;'>22689</p>
+            <div class = 'footer-left-link'>
+                <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i></a>
+                <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i></a>
+                <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i></a>
+                <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i></a>
+                <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i></a>
             </div>
-        </footer>
-    </body>
+        </div>
+    </div>
+    <div class = 'footer-right'>
+        <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i><span> centurionrobots@gmail.com</span></a>
+        <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i><span> @centurionrobotics</span></a>
+        <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i><span> @ftc_22689</span></a>
+        <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i><span> Centurion-Robotics</span></a>
+        <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
+    </div>
+</footer>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('sliderDots');
+
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSliderFixed() {
+        const wrapper = document.getElementById('sliderWrapper');
+        // Since slides are 100% width of the container, we move by 100% per slide.
+        // The gap is 20px.
+        wrapper.style.transform = `translateX(calc(-${currentSlide * 100}% - ${currentSlide * 20}px))`;
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        updateSliderFixed();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSliderFixed();
+    }
+</script>
+<script src = 'animateIfInView.js'></script>
+</body>
 </html>
