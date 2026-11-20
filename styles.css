@@ -216,6 +216,53 @@ html {
 }
 
 /* ------------------------------ */
+/*       AUTO-HIDING NAV          */
+/* ------------------------------ */
+/* Desktop screens with a mouse only. The nav is always hidden above the top
+   of the window, even at the top of the page, and slides down when the mouse
+   goes into the top area. Tabbing into it with the keyboard also shows it.
+   --nav-zone is how many pixels at the top of the window count as "the area"
+   (make it bigger to trigger from further down). */
+@media (hover: hover) and (min-width: 769px) {
+    .navigation {
+        --nav-zone: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    } .navigation::after {
+        /* invisible hover area just below the nav */
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: var(--nav-zone);
+    } .navigation:hover, .navigation:focus-within, .navigation.nav-pinned {
+        /* .nav-pinned is added by nav-hide.js the first time the page is scrolled down,
+           and keeps the nav shown until the page is switched */
+        transform: translateY(0);
+    } .navigation:has(.menu li:first-child .current-page) {
+        /* Home page only: normal nav that is always visible and stays on screen while scrolling */
+        position: sticky;
+        left: auto;
+        right: auto;
+        transform: none;
+        transition: none;
+    } .navigation:has(.menu li:first-child .current-page)::after {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navigation {
+        transition: none;
+    }
+}
+
+/* ------------------------------ */
 /*         PAGE STYLING           */
 /* ------------------------------ */
 @view-transition {

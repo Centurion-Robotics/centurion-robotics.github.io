@@ -127,5 +127,21 @@
                 <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i><span> 99 Killarney Ave, Winnipeg, MB R3T 3B3</span></a>
             </div>
         </footer>
+        <script src = 'nav-hide.js'></script>
+                <script>
+            (() => {
+                const nav = document.querySelector('.navigation');
+                if (!nav) return;
+                function check() {
+                    const y = Math.max(window.scrollY || 0, document.documentElement.scrollTop || 0, document.body.scrollTop || 0);
+                    if (y > 40) {
+                        nav.classList.add('nav-pinned');
+                        document.removeEventListener('scroll', check, true);
+                    }
+                }
+                document.addEventListener('scroll', check, { capture: true, passive: true });
+                check();
+            })();
+        </script>
     </body>
 </html>

@@ -552,5 +552,20 @@
         buildMenu();
         renderSeason(currentSeasonId);
     </script>
+            <script>
+            (() => {
+                const nav = document.querySelector('.navigation');
+                if (!nav) return;
+                function check() {
+                    const y = Math.max(window.scrollY || 0, document.documentElement.scrollTop || 0, document.body.scrollTop || 0);
+                    if (y > 40) {
+                        nav.classList.add('nav-pinned');
+                        document.removeEventListener('scroll', check, true);
+                    }
+                }
+                document.addEventListener('scroll', check, { capture: true, passive: true });
+                check();
+            })();
+        </script>
 </body>
 </html>
