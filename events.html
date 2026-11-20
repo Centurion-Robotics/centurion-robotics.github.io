@@ -530,40 +530,20 @@
     </div>
 </footer>
 <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dotsContainer = document.getElementById('sliderDots');
-
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.dot');
-
-    function updateSliderFixed() {
-        const wrapper = document.getElementById('sliderWrapper');
-        // Since slides are 100% width of the container, we move by 100% per slide.
-        // The gap is 20px.
-        wrapper.style.transform = `translateX(calc(-${currentSlide * 100}% - ${currentSlide * 20}px))`;
-
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
-    }
+    const SLIDER_GAP = 20;            // must match "gap" on .slider-wrapper in the CSS
+    const sliderState = new WeakMap(); // remembers which slide each slider is on
 
     function moveSlide(direction) {
-        currentSlide = (currentSlide + direction + slides.length) % slides.length;
-        updateSliderFixed();
-    }
+        // Find the slider whose arrow was clicked, so each section works on its own
+        const section = window.event.currentTarget.closest('.upcoming-events, .past-events');
+        const wrapper = section.querySelector('.slider-wrapper');
+        const total = wrapper.querySelectorAll('.slide').length;
 
-    function goToSlide(index) {
-        currentSlide = index;
-        updateSliderFixed();
+        const current = sliderState.get(wrapper) || 0;
+        const next = (current + direction + total) % total;   // wraps around both ways
+        sliderState.set(wrapper, next);
+
+        wrapper.style.transform = `translateX(calc(-${next * 100}% - ${next * SLIDER_GAP}px))`;
     }
 </script>
 <script src = 'animateIfInView.js'></script>
